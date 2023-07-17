@@ -27,6 +27,7 @@ public class Game : MonoBehaviour
          resourcesText.text=resources.ToString();
         }
 
+        CountResourcesFromOffline();
         StartCoroutine(GetResourcesAutomatically());
     }
 
@@ -51,5 +52,26 @@ public class Game : MonoBehaviour
         StartCoroutine(GetResourcesAutomatically());
     }
 
- 
+    private void CountResourcesFromOffline(){
+            TimeSpan timeSpan;
+            if(PlayerPrefs.HasKey("LastSessionDate")){
+                timeSpan=DateTime.Now-DateTime.Parse(PlayerPrefs.GetString("LastSessionDate"));
+                Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
+                resources+=resourcesMultiplier*(int)timeSpan.TotalSeconds;
+                PlayerPrefs.SetInt("resources",resources);
+                resourcesText.text=resources.ToString();
+            }
+    }
+
+    #if UNITY_ANDROID && !UNITY_EDITOR
+    private void OnApplicationPause(bool pause){
+        if (pause)
+        PlayerPrefs.SetString("LastSessionDate",DateTime.Now.ToString());
+    }
+
+    #else
+    private void OnApplicationQuit(){
+        PlayerPrefs.SetString("LastSessionDate",DateTime.Now.ToString());
+    }
+    #endif
 }
