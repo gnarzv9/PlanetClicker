@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Linq;
+
 
 public class Game : MonoBehaviour
 {
@@ -19,12 +21,34 @@ public class Game : MonoBehaviour
     [SerializeField]
     private int autoResourcesMultiplier=0;
 
+    private static readonly SortedDictionary<int, string> abbrevations = new SortedDictionary<int, string>
+    {
+        {1000,"K"},
+        {1000000, "M" },
+        {1000000000, "B" }
+    };
+
+    public static string AbbreviateNumber(float number)
+    {
+        for (int i = abbrevations.Count - 1; i >= 0; i--)
+        {
+            KeyValuePair<int, string> pair = abbrevations.ElementAt(i);
+            if (Mathf.Abs(number) >= pair.Key)
+            {
+                float roundedNumber = number / pair.Key;
+                return roundedNumber.ToString("#.##") + pair.Value;
+            }
+        }
+        return number.ToString();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
         if(PlayerPrefs.HasKey("resources")){
          resources=PlayerPrefs.GetInt("resources");
-         resourcesText.text=resources.ToString();
+         resourcesText.text=AbbreviateNumber(resources);
         }
 
         CountResourcesFromOffline();
@@ -41,13 +65,13 @@ public class Game : MonoBehaviour
         Instantiate(clickeffect,buttonPosition.position.normalized, Quaternion.identity);
         resources+= resourcesMultiplier;
         PlayerPrefs.SetInt("resources",resources);
-        resourcesText.text=resources.ToString();
+        resourcesText.text= AbbreviateNumber(resources);
     }
 
     private IEnumerator GetResourcesAutomatically(){
         resources+=autoResourcesMultiplier;
         PlayerPrefs.SetInt("resources",resources);
-        resourcesText.text= resources.ToString();
+        resourcesText.text= AbbreviateNumber(resources);
         yield return new WaitForSeconds(1);
         StartCoroutine(GetResourcesAutomatically());
     }
@@ -59,8 +83,8 @@ public class Game : MonoBehaviour
                 Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
                 resources+=resourcesMultiplier*(int)timeSpan.TotalSeconds;
                 PlayerPrefs.SetInt("resources",resources);
-                resourcesText.text=resources.ToString();
-            }
+                resourcesText.text= AbbreviateNumber(resources);
+        }
     }
 
     #if UNITY_ANDROID && !UNITY_EDITOR
