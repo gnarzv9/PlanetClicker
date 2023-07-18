@@ -10,16 +10,19 @@ public class Game : MonoBehaviour
 {
 
     private int resources;
+    public int Resources {get;set;}
     [SerializeField]
     private TMP_Text resourcesText;
     [SerializeField]
     private int resourcesMultiplier=0;
+    public int ResourcesMultiplier{get;set;}
     [SerializeField] 
     private GameObject clickeffect;
     [SerializeField]
     private RectTransform buttonPosition;
     [SerializeField]
     private int autoResourcesMultiplier=0;
+    public int AutoResourcesMultiplier{get;set;}
 
     private static readonly SortedDictionary<int, string> abbrevations = new SortedDictionary<int, string>
     {
