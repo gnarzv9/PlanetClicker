@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 423828034}
   - component: {fileID: 423828033}
   m_Layer: 5
-  m_Name: Astronauts
+  m_Name: AstronautsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,6 +1520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608010954}
   - component: {fileID: 1608010953}
+  - component: {fileID: 1608010955}
   m_Layer: 0
   m_Name: Resources Controller
   m_TagString: Untagged
@@ -1559,6 +1560,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608010955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608010952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192a8e0d9f4f6ba43ba8f44269dbc7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 1608010953}
+  BuyButton1: {fileID: 0}
 --- !u!1 &1761811109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,7 +1587,7 @@ GameObject:
   - component: {fileID: 1761811112}
   - component: {fileID: 1761811111}
   m_Layer: 5
-  m_Name: planet
+  m_Name: planetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1981,7 +1996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 126.850006, y: -18.984985}
+  m_AnchoredPosition: {x: 126.849976, y: -18.984985}
   m_SizeDelta: {x: 352.3, y: 196.03003}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2040951069
