@@ -9,79 +9,61 @@ using System.Linq;
 public class Game : MonoBehaviour
 {
 
-    private int resources;
-    public int Resources { get; set; }
-    [SerializeField]
-    private TMP_Text resourcesText;
-    [SerializeField]
-    private int resourcesMultiplier = 0;
-    public int ResourcesMultiplier { get; set; }
-    [SerializeField]
-    private GameObject clickeffect;
-    [SerializeField]
-    private RectTransform buttonPosition;
-    [SerializeField]
-    private int autoResourcesMultiplier = 0;
+    [SerializeField] private int resources;
+    [SerializeField] private TMP_Text resourcesText;
+    [SerializeField] private int resourcesMultiplier = 0;
+    [SerializeField] private GameObject clickeffect;
+    [SerializeField] private RectTransform buttonPosition;
+    [SerializeField] private int autoResourcesMultiplier = 0;
 
-    public int AutoResourcesMultiplier{get;set;}
+    public FormattingNumbers numbers; //skripta za formatiranje brojeva
 
-    //seter  za ResMult dodat (ne dirati!)
     public void setResourceMultiplier(int number)
     {
         resourcesMultiplier = number;
     }
-
-    private static readonly SortedDictionary<int, string> abbrevations = new SortedDictionary<int, string>
+    public int GetResourceMultiplier() 
     {
-        {1000,"K"},
-        {1000000, "M" },
-        {1000000000, "B" }
-    };
-
-    public static string AbbreviateNumber(float number)
-    {
-        for (int i = abbrevations.Count - 1; i >= 0; i--)
-        {
-            KeyValuePair<int, string> pair = abbrevations.ElementAt(i);
-            if (Mathf.Abs(number) >= pair.Key)
-            {
-                float roundedNumber = number / pair.Key;
-                return roundedNumber.ToString("#.##") + pair.Value;
-            }
-        }
-        return number.ToString();
+        return resourcesMultiplier;
     }
 
+    public void setResource(int number)
+    {
+        resources = number;
+    }
+    public int GetResource()
+    {
+        return resources;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         if(PlayerPrefs.HasKey("resources")){
          resources=PlayerPrefs.GetInt("resources");
-         resourcesText.text=AbbreviateNumber(resources);
+         resourcesText.text=numbers.AbbreviateNumber(resources);
         }
+
+        /*if (PlayerPrefs.HasKey("resourceMultiplier")) //dodato
+        {
+            resourcesMultiplier = PlayerPrefs.GetInt("resourceMultiplier");
+        } */
 
         CountResourcesFromOffline();
         StartCoroutine(GetResourcesAutomatically());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void EarnResources(){
         Instantiate(clickeffect,buttonPosition.position.normalized, Quaternion.identity);
         resources+= resourcesMultiplier;
         PlayerPrefs.SetInt("resources",resources);
-        resourcesText.text= AbbreviateNumber(resources);
+        resourcesText.text= numbers.AbbreviateNumber(resources);
     }
 
     private IEnumerator GetResourcesAutomatically(){
         resources+=autoResourcesMultiplier;
         PlayerPrefs.SetInt("resources",resources);
-        resourcesText.text= AbbreviateNumber(resources);
+        resourcesText.text= numbers.AbbreviateNumber(resources);
         yield return new WaitForSeconds(1);
         StartCoroutine(GetResourcesAutomatically());
     }
@@ -93,7 +75,8 @@ public class Game : MonoBehaviour
                 Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
                 resources+=resourcesMultiplier*(int)timeSpan.TotalSeconds;
                 PlayerPrefs.SetInt("resources",resources);
-                resourcesText.text= AbbreviateNumber(resources);
+                resourcesText.text= numbers.AbbreviateNumber(resources);
+             //   PlayerPrefs.SetInt("ResourceMultiplier", resourcesMultiplier);
         }
     }
 

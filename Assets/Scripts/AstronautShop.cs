@@ -2,28 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AstronautShop : MonoBehaviour
 {
-    //skripa povezana sa drugom skriptom (nista jos ne radi)
+    //shop skripta
 
-    public Game script;
-    public GameObject BuyButton1; //button trenutno povezan na astraunt button
+    public Game game;
+    public FormattingNumbers numbers;
+    public TMP_Text upgradeText;
+    public int upgradePrice;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        upgradePrice = 500;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(script.Resources >= 50)
-        {
-            BuyButton1.SetActive(true);
-           // script.setResourceMultiplier(script.ResourcesMultiplier+2);
-        }
+        upgradeText.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice);
+    }
 
+    public void UpgradeResourceMultiplier()
+    {
+        if (game.GetResource() >= upgradePrice) 
+        {
+            game.setResource(game.GetResource() - upgradePrice);
+            game.setResourceMultiplier(game.GetResourceMultiplier() + 2);
+            upgradePrice *= 2;
+            Debug.Log("usao sam");
+        }
+        else
+        {
+            Debug.Log("nisam usao");
+        }
+            
     }
 }
