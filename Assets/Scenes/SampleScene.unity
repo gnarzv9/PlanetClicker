@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 423828035}
   - component: {fileID: 423828034}
   - component: {fileID: 423828033}
+  - component: {fileID: 423828036}
   m_Layer: 5
   m_Name: AstronautsButton
   m_TagString: Untagged
@@ -390,7 +391,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 270, y: -862.01}
-  m_SizeDelta: {x: 540, y: 195.99}
+  m_SizeDelta: {x: 540, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423828033
 MonoBehaviour:
@@ -436,16 +437,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848117318}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
+      - m_Target: {fileID: 423828036}
+        m_TargetAssemblyTypeName: OpenAstronautShop, Assembly-CSharp
+        m_MethodName: OpenPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: nothing
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &423828034
@@ -486,6 +487,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423828031}
   m_CullTransparentMesh: 1
+--- !u!114 &423828036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423828031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0b1fcf1dc5e4b4ea4e7a214d046fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panel: {fileID: 1848117314}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +674,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -270, y: -862.01}
-  m_SizeDelta: {x: 540, y: 195.99}
+  m_SizeDelta: {x: 540, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527090983
 MonoBehaviour:
@@ -1572,7 +1586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192a8e0d9f4f6ba43ba8f44269dbc7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 1608010953}
+  script: {fileID: 0}
   BuyButton1: {fileID: 0}
 --- !u!1 &1761811109
 GameObject:
@@ -1950,7 +1964,7 @@ Animator:
   m_GameObject: {fileID: 1848117314}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e2a07a0c922bf24409868f518f70bdca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0324189cce106044aa74889954cf19c8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
