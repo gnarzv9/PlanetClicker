@@ -26,6 +26,4 @@ public class FormattingNumbers : MonoBehaviour //Skripa za formatiranje brojeva
         }
         return number.ToString();
     }
-
-
 }

@@ -15,9 +15,11 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject clickeffect;
     [SerializeField] private RectTransform buttonPosition;
     [SerializeField] private int autoResourcesMultiplier = 0;
+    [SerializeField] private float autoResourceSpeed = 1;
 
     public FormattingNumbers numbers; //skripta za formatiranje brojeva
 
+    //getteri i setteri
     public void setResourceMultiplier(int number)
     {
         resourcesMultiplier = number;
@@ -34,6 +36,24 @@ public class Game : MonoBehaviour
     public int GetResource()
     {
         return resources;
+    }
+
+    public void SetautoResourcesMultiplier(int number)
+    {
+        autoResourcesMultiplier = number;
+    }
+    public int GetautoResourcesMultiplier()
+    {
+        return autoResourcesMultiplier;
+    }
+
+    public void SetautoResourceSpeed(float number)
+    {
+        autoResourceSpeed = number;
+    }
+    public float GetautoResourceSpeed()
+    {
+        return autoResourceSpeed;
     }
 
     // Start is called before the first frame update
@@ -61,7 +81,7 @@ public class Game : MonoBehaviour
     }
 
     private IEnumerator GetResourcesAutomatically(){
-        resources+=autoResourcesMultiplier;
+        resources+=(int)(autoResourcesMultiplier * autoResourceSpeed);
         PlayerPrefs.SetInt("resources",resources);
         resourcesText.text= numbers.AbbreviateNumber(resources);
         yield return new WaitForSeconds(1);
@@ -73,7 +93,7 @@ public class Game : MonoBehaviour
             if(PlayerPrefs.HasKey("LastSessionDate")){
                 timeSpan=DateTime.Now-DateTime.Parse(PlayerPrefs.GetString("LastSessionDate"));
                 Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
-                resources+=resourcesMultiplier*(int)timeSpan.TotalSeconds;
+                resources+= (int)(autoResourcesMultiplier * autoResourceSpeed * (int)timeSpan.TotalSeconds);
                 PlayerPrefs.SetInt("resources",resources);
                 resourcesText.text= numbers.AbbreviateNumber(resources);
              //   PlayerPrefs.SetInt("ResourceMultiplier", resourcesMultiplier);
