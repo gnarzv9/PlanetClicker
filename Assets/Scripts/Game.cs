@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Linq;
@@ -64,20 +65,16 @@ public class Game : MonoBehaviour
          resourcesText.text=numbers.AbbreviateNumber(resources);
         }
 
-        /*if (PlayerPrefs.HasKey("resourceMultiplier")) //dodato
-        {
-            resourcesMultiplier = PlayerPrefs.GetInt("resourceMultiplier");
-        } */
-
         CountResourcesFromOffline();
         StartCoroutine(GetResourcesAutomatically());
     }
 
-    public void EarnResources(){
+    private void EarnResources(){
         Instantiate(clickeffect,buttonPosition.position.normalized, Quaternion.identity);
         resources+= resourcesMultiplier;
         PlayerPrefs.SetInt("resources",resources);
         resourcesText.text= numbers.AbbreviateNumber(resources);
+
     }
 
     private IEnumerator GetResourcesAutomatically(){
@@ -96,7 +93,6 @@ public class Game : MonoBehaviour
                 resources+= (int)(autoResourcesMultiplier * autoResourceSpeed * (int)timeSpan.TotalSeconds);
                 PlayerPrefs.SetInt("resources",resources);
                 resourcesText.text= numbers.AbbreviateNumber(resources);
-             //   PlayerPrefs.SetInt("ResourceMultiplier", resourcesMultiplier);
         }
     }
 
