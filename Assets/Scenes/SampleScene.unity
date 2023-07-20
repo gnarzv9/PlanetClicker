@@ -2347,8 +2347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -221.8, y: 2}
-  m_SizeDelta: {x: 142.17, y: 25.64}
+  m_AnchoredPosition: {x: -170.77, y: 2}
+  m_SizeDelta: {x: 244.24, y: 25.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386013960
 MonoBehaviour:
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2625,6 +2625,7 @@ GameObject:
   - component: {fileID: 1608010953}
   - component: {fileID: 1608010955}
   - component: {fileID: 1608010956}
+  - component: {fileID: 1608010957}
   m_Layer: 0
   m_Name: Resources Controller
   m_TagString: Untagged
@@ -2699,6 +2700,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43983321595f1cc448ac62a125e9077a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1608010957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608010952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254df044fda65a042bdb8ec3cc56e5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 1608010953}
+  planethealth: {fileID: 1761811115}
+  healthbar: {fileID: 2146915619}
 --- !u!1 &1679207951
 GameObject:
   m_ObjectHideFlags: 0

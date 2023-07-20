@@ -21,14 +21,14 @@ public class Planethealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        TextHealth.text = numbers.AbbreviateNumber(maxHealth) + "\\" + numbers.AbbreviateNumber(maxHealth);
+        TextHealth.text = numbers.AbbreviateNumber(currentHealth) + "\\" + numbers.AbbreviateNumber(maxHealth);
     }
 
     // Update is called once per frame 
     void Update()   //AutoDmgSkidanje
     {
-        TextHealth.text = numbers.AbbreviateNumber(maxHealth) + "\\" + numbers.AbbreviateNumber(currentHealth);
-        if (Time.time >= nextTime)
+        TextHealth.text = numbers.AbbreviateNumber(currentHealth) + "\\" + numbers.AbbreviateNumber(maxHealth);
+        if (Time.time >= nextTime)  //if napravljen da radi dmg po sekundi
         {
             TakeDamage((int)(game.GetautoResourcesMultiplier() * game.GetautoResourceSpeed()));
             nextTime += interval;
