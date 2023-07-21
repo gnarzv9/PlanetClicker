@@ -8,8 +8,8 @@ public class GoingToNewPlanet : MonoBehaviour
     public Game game;
     public Planethealth planethealth;
     public HealthBar healthbar;
-    //public Image Planet1;
-    //public Sprite Planet2;
+    public GameObject Planet1;
+    public GameObject Planet2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class GoingToNewPlanet : MonoBehaviour
             planethealth.currentHealth = (int)(planethealth.maxHealth * 1.5);
             planethealth.maxHealth = planethealth.currentHealth;
             healthbar.SetMaxHealth(planethealth.maxHealth);
-            //Planet1.sprite = Planet2;
+            
         }
 
     }
