@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3548267147
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Rebirth Shop
+    uniqueID: 930313031
     locked: 0
