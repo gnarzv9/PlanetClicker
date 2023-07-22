@@ -13,6 +13,7 @@ public class AstronautShop : MonoBehaviour
     public TMP_Text upgradeText1;
     public TMP_Text upgradeText2;
     public TMP_Text upgradeText3;
+    public RebirthScript rebirth;
     public int upgradePrice1;   //cena za upgrejdovanje ResourceMultiplier-a
     public int upgradePrice2;   //cena za upgrejdovanje Automatskog prikupljanja resursa (kolicina)
     public int upgradePrice3;   //cena za upgrejdovanje Automatskog prikupljanja resursa (brzina)
@@ -33,9 +34,9 @@ public class AstronautShop : MonoBehaviour
 
     public void UpgradeResourceMultiplier()
     {
-        if (game.GetResource() >= upgradePrice1) 
+        if (rebirth.GetRebirthResource() >= upgradePrice1) 
         {
-            game.setResource(game.GetResource() - upgradePrice1);
+            rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.setResourceMultiplier(game.GetResourceMultiplier() + 2);
             upgradePrice1 *= 2;
             Debug.Log("usao sam1");
@@ -48,9 +49,9 @@ public class AstronautShop : MonoBehaviour
 
     public void UpgradeAutoResourceMultiplier()
     {
-        if (game.GetResource() >= upgradePrice2)
+        if (rebirth.GetRebirthResource() >= upgradePrice2)
         {
-            game.setResource(game.GetResource() - upgradePrice2);
+            rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.SetautoResourcesMultiplier(game.GetautoResourcesMultiplier() + 2);
             upgradePrice2 *= 2;
             Debug.Log("usao sam2");
@@ -63,9 +64,9 @@ public class AstronautShop : MonoBehaviour
 
     public void UpgradeAutoResourceSpeed()
     {
-        if (game.GetResource() >= upgradePrice3)
+        if (rebirth.GetRebirthResource() >= upgradePrice3)
         {
-            game.setResource(game.GetResource() - upgradePrice3);
+            rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.SetautoResourceSpeed((float)(game.GetautoResourceSpeed() + 0.2));
             upgradePrice3 *= 2;
             Debug.Log("usao sam3");

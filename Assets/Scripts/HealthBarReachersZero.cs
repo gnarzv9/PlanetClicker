@@ -9,7 +9,7 @@ public class HealthBarReachersZero : MonoBehaviour
     public Game game;
     public Planethealth planethealth;
     public HealthBar healthbar;
-
+    public RebirthScript rebirth;
     public FormattingNumbers numbers;
 
     // Start is called before the first frame update
@@ -17,8 +17,8 @@ public class HealthBarReachersZero : MonoBehaviour
     {
         if(planethealth.currentHealth <= 0)
         {
-            game.SetRebirthResource((int)(game.GetRebirthResource() * planethealth.maxHealth * 0.1));
-            game.rebirthText.text = numbers.AbbreviateNumber(game.GetRebirthResource());
+            rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() * planethealth.maxHealth * 0.1));
+            rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
         }
     }
 
@@ -27,8 +27,8 @@ public class HealthBarReachersZero : MonoBehaviour
     {
         if (planethealth.currentHealth <= 0)
         {
-            game.SetRebirthResource((int)(game.GetRebirthResource() + planethealth.maxHealth * 0.1));
-            game.rebirthText.text = numbers.AbbreviateNumber(game.GetRebirthResource());
+            rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() + planethealth.maxHealth * 0.1));
+            rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
             Debug.Log("Dodao sam: " + planethealth.maxHealth * 0.1);
             planethealth.currentHealth = (int)(planethealth.maxHealth * 1.5);
             planethealth.maxHealth = planethealth.currentHealth;

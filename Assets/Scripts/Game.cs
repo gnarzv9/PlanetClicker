@@ -11,9 +11,7 @@ public class Game : MonoBehaviour
 {
 
     [SerializeField] private int resources;
-    [SerializeField] private int rebirthResource = 0;
     [SerializeField] private TMP_Text resourcesText;
-    [SerializeField] public TMP_Text rebirthText;
     [SerializeField] private int resourcesMultiplier = 0;
     [SerializeField] private GameObject clickeffect;
     [SerializeField] private RectTransform buttonPosition;
@@ -27,18 +25,9 @@ public class Game : MonoBehaviour
     {
         resourcesMultiplier = number;
     }
-    public int GetResourceMultiplier() 
+    public int GetResourceMultiplier()
     {
         return resourcesMultiplier;
-    }
-
-    public void SetRebirthResource(int number)
-    {
-        rebirthResource = number;
-    }
-    public int GetRebirthResource()
-    {
-        return rebirthResource;
     }
 
     public void setResource(int number)
