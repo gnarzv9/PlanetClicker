@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 268100929}
   - component: {fileID: 268100928}
   - component: {fileID: 268100927}
+  - component: {fileID: 268100931}
   m_Layer: 0
   m_Name: ship 6
   m_TagString: Untagged
@@ -921,6 +922,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &268100931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268100925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &292398116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1329,7 @@ GameObject:
   - component: {fileID: 318890287}
   - component: {fileID: 318890286}
   - component: {fileID: 318890285}
+  - component: {fileID: 318890289}
   m_Layer: 0
   m_Name: ship 14
   m_TagString: Untagged
@@ -1431,6 +1452,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &318890289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318890283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &393043837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1484,7 @@ GameObject:
   - component: {fileID: 393043841}
   - component: {fileID: 393043840}
   - component: {fileID: 393043839}
+  - component: {fileID: 393043843}
   m_Layer: 0
   m_Name: ship 5
   m_TagString: Untagged
@@ -1566,6 +1607,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &393043843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393043837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &423828031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2588,7 @@ GameObject:
   - component: {fileID: 607420406}
   - component: {fileID: 607420405}
   - component: {fileID: 607420404}
+  - component: {fileID: 607420408}
   m_Layer: 0
   m_Name: ship 15
   m_TagString: Untagged
@@ -2650,6 +2711,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &607420408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607420402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3283,7 @@ GameObject:
   - component: {fileID: 776756775}
   - component: {fileID: 776756774}
   - component: {fileID: 776756773}
+  - component: {fileID: 776756777}
   m_Layer: 0
   m_Name: ship 16
   m_TagString: Untagged
@@ -3325,6 +3406,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &776756777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776756771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &789103875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,10 +3510,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1608010955}
-        m_TargetAssemblyTypeName: AstronautShop, Assembly-CSharp
-        m_MethodName: UpgradeResourceMultiplier
-        m_Mode: 1
+      - m_Target: {fileID: 1679374159}
+        m_TargetAssemblyTypeName: TestShop, Assembly-CSharp
+        m_MethodName: UpgradeShip
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3788,6 +3888,7 @@ GameObject:
   - component: {fileID: 999448211}
   - component: {fileID: 999448210}
   - component: {fileID: 999448209}
+  - component: {fileID: 999448213}
   m_Layer: 0
   m_Name: ship 4
   m_TagString: Untagged
@@ -3910,6 +4011,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &999448213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999448207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1004072913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,6 +4043,7 @@ GameObject:
   - component: {fileID: 1004072917}
   - component: {fileID: 1004072916}
   - component: {fileID: 1004072915}
+  - component: {fileID: 1004072919}
   m_Layer: 0
   m_Name: ship 2
   m_TagString: Untagged
@@ -4045,6 +4166,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1004072919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004072913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1021252059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,6 +4198,7 @@ GameObject:
   - component: {fileID: 1021252063}
   - component: {fileID: 1021252062}
   - component: {fileID: 1021252061}
+  - component: {fileID: 1021252065}
   m_Layer: 0
   m_Name: ship 12
   m_TagString: Untagged
@@ -4180,6 +4321,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1021252065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021252059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1033800769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,6 +4353,7 @@ GameObject:
   - component: {fileID: 1033800773}
   - component: {fileID: 1033800772}
   - component: {fileID: 1033800771}
+  - component: {fileID: 1033800775}
   m_Layer: 0
   m_Name: ship 8
   m_TagString: Untagged
@@ -4315,6 +4476,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1033800775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033800769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1065355560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5312,6 +5492,7 @@ GameObject:
   - component: {fileID: 1434769236}
   - component: {fileID: 1434769235}
   - component: {fileID: 1434769234}
+  - component: {fileID: 1434769238}
   m_Layer: 0
   m_Name: ship 9
   m_TagString: Untagged
@@ -5434,6 +5615,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1434769238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434769232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1498516227
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,6 +5723,7 @@ GameObject:
   - component: {fileID: 1512959191}
   - component: {fileID: 1512959190}
   - component: {fileID: 1512959189}
+  - component: {fileID: 1512959193}
   m_Layer: 0
   m_Name: ship 11
   m_TagString: Untagged
@@ -5645,6 +5846,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1512959193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512959187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1538215122
 GameObject:
   m_ObjectHideFlags: 0
@@ -6406,6 +6626,7 @@ GameObject:
   - component: {fileID: 1672230427}
   - component: {fileID: 1672230426}
   - component: {fileID: 1672230425}
+  - component: {fileID: 1672230429}
   m_Layer: 0
   m_Name: ship 10
   m_TagString: Untagged
@@ -6528,6 +6749,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1672230429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672230423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1679207951
 GameObject:
   m_ObjectHideFlags: 0
@@ -6663,6 +6903,52 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1679374158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1679374160}
+  - component: {fileID: 1679374159}
+  m_Layer: 0
+  m_Name: TestShop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1679374159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679374158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116e3f0544f9da54ebc700c6ff7f21a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceShips: []
+  game: {fileID: 0}
+--- !u!4 &1679374160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679374158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.337142, y: 2.546328, z: 0.50773656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1761811110 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3269602730379965781, guid: 4d94d43f73e8fe94b85ff8ea76b8f87f, type: 3}
@@ -6781,7 +7067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1848117315
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7070,6 +7356,7 @@ GameObject:
   - component: {fileID: 1860715975}
   - component: {fileID: 1860715978}
   - component: {fileID: 1860715979}
+  - component: {fileID: 1860715980}
   m_Layer: 0
   m_Name: Overlord
   m_TagString: Untagged
@@ -7192,6 +7479,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 1761811110}
   speed: 50
+--- !u!114 &1860715980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860715973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &1875743489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7311,6 +7617,7 @@ GameObject:
   - component: {fileID: 1909645115}
   - component: {fileID: 1909645114}
   - component: {fileID: 1909645113}
+  - component: {fileID: 1909645117}
   m_Layer: 0
   m_Name: ship 3
   m_TagString: Untagged
@@ -7433,6 +7740,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1909645117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909645111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &2024111253
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,6 +7916,7 @@ GameObject:
   - component: {fileID: 2033781371}
   - component: {fileID: 2033781370}
   - component: {fileID: 2033781369}
+  - component: {fileID: 2033781373}
   m_Layer: 0
   m_Name: ship 7
   m_TagString: Untagged
@@ -7712,6 +8039,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2033781373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033781367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &2040951069
 GameObject:
   m_ObjectHideFlags: 0
@@ -8078,6 +8424,7 @@ GameObject:
   - component: {fileID: 2137610144}
   - component: {fileID: 2137610143}
   - component: {fileID: 2137610142}
+  - component: {fileID: 2137610146}
   m_Layer: 0
   m_Name: ship 13
   m_TagString: Untagged
@@ -8200,6 +8547,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2137610146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137610140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDmg: 0
+  shipPrice: 0
+  firstDmgValue: 0
+  upgradeValue: 0
+  upgradePrice: 0
+  numbers: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!1 &2139730552
 GameObject:
   m_ObjectHideFlags: 0
