@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class RebornShop : MonoBehaviour
+public class AstronautShop : MonoBehaviour
 {
     //shop skripta
 
