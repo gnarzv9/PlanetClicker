@@ -38,7 +38,6 @@ public class Planethealth : MonoBehaviour
     void OnMouseDown()  //SkidanjeDmgPoKliku
     {
         TakeDamage(game.GetResourceMultiplier());
-        Debug.Log("Usao sam");
     }
 
     void TakeDamage(int damage)
