@@ -12,6 +12,7 @@ public class SpaceShip : MonoBehaviour
     [SerializeField] private int upgradePrice;
     [SerializeField] FormattingNumbers numbers;
     [SerializeField] TMP_Text priceText;
+    [SerializeField] TMP_Text damageText;
 
     public int ShipPrice
     {
@@ -29,19 +30,23 @@ public class SpaceShip : MonoBehaviour
     {
         shipDmg = dmg;
         shipPrice = price;
+        damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg"; //text damage-a
+        priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
     }
 
     public void Upgrade()
     {
         shipDmg += upgradeValue;
         shipPrice += upgradePrice;
-        priceText.text = numbers.AbbreviateNumber(shipPrice);
+        priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
+        damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg";
     }
 
     public void FirstUpgrade()
     {
         shipDmg += firstDmgValue;
         shipPrice += upgradePrice;
-        priceText.text = numbers.AbbreviateNumber(shipPrice);
+        priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
+        damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg";
     }
 }
