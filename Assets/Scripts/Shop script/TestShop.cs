@@ -8,6 +8,10 @@ public class TestShop : MonoBehaviour
     [SerializeField] private GameObject[] bullets;
     [SerializeField] private Game game;
 
+    public int NumberOfShips
+    {
+        get { return spaceShips.Count; }
+    }
     public List<SpaceShip> SpaceShips
     {
         get { return spaceShips; }

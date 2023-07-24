@@ -35,12 +35,7 @@ public class Planethealth : MonoBehaviour
         }
     }
 
-    void OnMouseDown()  //SkidanjeDmgPoKliku
-    {
-        TakeDamage(game.GetResourceMultiplier());
-    }
-
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth); 

@@ -18,6 +18,11 @@ public class Game : MonoBehaviour
     [SerializeField] private int autoResourcesMultiplier = 0;
     [SerializeField] private float autoResourceSpeed = 1;
 
+    public TMP_Text ResourcesText
+    {
+        get {return resourcesText; }
+    }
+
     public FormattingNumbers numbers; //skripta za formatiranje brojeva
 
     //getteri i setteri
