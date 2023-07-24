@@ -6,15 +6,22 @@ using UnityEngine;
 
 public class Planethealth : MonoBehaviour
 {
-    public int maxHealth = 100000;
-    public int currentHealth;
+    [SerializeField] private int maxHealth = 100000;
+    [SerializeField] private int currentHealth;
     public HealthBar healthBar;
     public Game game;
     private int interval = 1;
     float nextTime = 0;
     public FormattingNumbers numbers;
-
     [SerializeField] private TMP_Text TextHealth;
+
+    public int MaxHealth
+    { get { return maxHealth; }
+      set { maxHealth = value; } }
+
+    public int CurrentHealth
+    {   get { return currentHealth; }
+        set { currentHealth = value; } }
 
     // Start is called before the first frame update
     void Start()

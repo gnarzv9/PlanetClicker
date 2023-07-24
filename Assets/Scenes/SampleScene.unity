@@ -8929,7 +8929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipDmg: 0
   shipPrice: 20
-  firstUpgrade: 0
+  firstUpgrade: 20000
   upgradeValue: 20
   upgradePrice: 20
   numbers: {fileID: 1608010956}
@@ -12534,7 +12534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc06e299ad388349acc79433063370b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetHp: {fileID: 1761811115}
+  Hp: {fileID: 1608010957}
   changePlanet: {fileID: 1761811114}
   changePlanetIcon: {fileID: 1365064664}
 --- !u!114 &1608010959

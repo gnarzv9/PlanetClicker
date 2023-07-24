@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class NewPlanetTransition : MonoBehaviour
 {
-    [SerializeField] private Planethealth planetHp;
+    [SerializeField] private HealthBarReachersZero Hp;
     [SerializeField] private Animator changePlanet;
     [SerializeField] private Animator changePlanetIcon;
-    private bool triggered = false;
+    private bool hasTriggeredAnimation = false;
+    private int planetNum = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +19,18 @@ public class NewPlanetTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(changePlanet != null)
-        {
-            if (planetHp.maxHealth == 150000 && triggered==false)
+            if (Hp.ChangedHp == true)
             {
-                changePlanet.SetTrigger("planet2Tr");
-                changePlanetIcon.SetTrigger("planet2Tr");
-                Debug.Log("Treba da promeni planetu");    
-                triggered = true;
+            //planet name change in here
+            changePlanet.SetBool("nextPlanet", true);
+            //changePlanet.CrossFade("planet3", 0f);
+            changePlanetIcon.SetTrigger("planet2Tr");
+                Debug.Log("Promenio je planetu");    
             }
-        }
+            else changePlanet.SetBool("nextPlanet", false);
+    }
+    public void ResetAnimationTrigger()
+    {
+        hasTriggeredAnimation = false;
     }
 }
