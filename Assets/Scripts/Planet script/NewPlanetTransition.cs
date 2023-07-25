@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum planets { planet0, planet1, planet2, planet3, planet4 , planet5 }
+public enum planets { planet0, planet1, planet2, planet3, planet4 , planet5 } // napraviti poseban enum za boseve
 public class NewPlanetTransition : MonoBehaviour
 {
-    enum planetsName { nothing, Earth, Moon, Sun }
+    enum planetsName { nothing, Earth, Moon, Sun ,WettyPatty,IceSpice, boss}
 
     [SerializeField] private HealthBarReachersZero Hp;
     private Animator animator;
     [SerializeField] private TMP_Text planetName;
     private string currentState;
     private int planetNum = 1;
-
+    [SerializeField] private bool killedBoss = false;
     public int PlanetNum 
     {
         get { return planetNum; }
@@ -40,14 +40,38 @@ public class NewPlanetTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Hp.ChangedHp == true)
+        if (Hp.ChangedHp == true)   //menjanje planete do bosa
             {
                 planetNum++;
-                planetsName planetname = (planetsName)planetNum; //uzimaju broj na kom se nalazi enum uz pomoc planetNum promenjive
-                planets numPlanet = (planets)planetNum;
+                //menjanje imena planete
+                planetsName planetname = (planetsName)planetNum;                          
+                if (planetname.ToString() == "boss") // nasao je enum sa imenom boss u sebi
+                    {
+                        if(killedBoss == false)
+                            {
+                                planetNum--;
+                                Debug.Log("Nije ubio bosa vraca se na zadnju planetu");
+                            }
+                        else
+                            {
+                                planetNum++;
+                                Debug.Log("Ubio je bosa ide u drugi univerzum");
+                             }
+                    }
+                //menja ime planete
+                planetname = (planetsName)planetNum;
                 planetName.text = planetname.ToString();
+                //menja planetu
+                planets numPlanet = (planets)planetNum;
                 ChangeAnimationState(numPlanet.ToString());
-                Debug.Log("Promenio je planetu");    
+                planetName.text = planetname.ToString();           
             }
+    }
+    //posle svake pete planete ne menja helte
+    public bool OnTheSamePlanet()
+    {
+        if (planetNum % 5 == 0)
+            return true;
+        return false;
     }
 }

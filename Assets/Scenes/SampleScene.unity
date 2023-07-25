@@ -3149,8 +3149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.40724495, y: 0.5}
   m_AnchorMax: {x: 0.46353063, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: 14.78}
-  m_SizeDelta: {x: 135.43, y: 116.52}
+  m_AnchoredPosition: {x: -35.732, y: 14.78}
+  m_SizeDelta: {x: 174.89, y: 116.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405945004
 MonoBehaviour:
@@ -3235,7 +3235,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -65.65178, y: 0, z: 0.77154356, w: 0}
+  m_margin: {x: -0.5483399, y: 0, z: 0.77154356, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11891,7 +11891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -191.14001, y: 54.484}
+  m_AnchoredPosition: {x: -198.48, y: 54.484}
   m_SizeDelta: {x: 288.82, y: 38.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1542006030
@@ -11977,7 +11977,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 82.38255, w: 0}
+  m_margin: {x: 0, y: -23.850159, z: 80.23601, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12571,6 +12571,7 @@ MonoBehaviour:
   healthbar: {fileID: 2146915619}
   rebirth: {fileID: 1608010959}
   numbers: {fileID: 1608010956}
+  newPlanet: {fileID: 1783489645}
 --- !u!114 &1608010959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13868,6 +13869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: {fileID: 1608010957}
   planetName: {fileID: 1542006030}
+  killedBoss: 0
 --- !u!1 &1844292632
 GameObject:
   m_ObjectHideFlags: 0

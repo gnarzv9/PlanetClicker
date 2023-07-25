@@ -33,10 +33,9 @@ public class PlanetIcontransition : MonoBehaviour
     {
         if (Hp.ChangedHp == true)
         {
-            //numIcon = newPlanet.PlanetNum + 1; //promena broja kasni pa ga ovde takodje moramo dodati za plus 1
-            planets numPlanet = (planets)newPlanet.PlanetNum;   //biramo mesto koje otvaramo u enumu
+            //kada nadje broj enum sa imenom animacije menja ga
+            planets numPlanet = (planets)newPlanet.PlanetNum;  
             ChangeAnimationState(numPlanet.ToString()); 
-            Debug.Log("Promenio je ikonicu");
             Debug.Log(numPlanet.ToString());
         }
     }
