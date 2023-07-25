@@ -70,7 +70,7 @@ public class NewPlanetTransition : MonoBehaviour
         }
     }
     //posle svake pete planete ne menja helte
-    public bool OnTheSamePlanet()
+    public bool BossPlanet()
     {
         if (planetNum % 5 == 0)
             return true;

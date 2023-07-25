@@ -34,7 +34,7 @@ public class HealthBarReachersZero : MonoBehaviour
 
         if (planethealth.CurrentHealth <= 0)
         {
-            if (newPlanet.OnTheSamePlanet() == false)
+            if (newPlanet.BossPlanet() == false)
             {
                 rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() + planethealth.MaxHealth * 0.1));
                 rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
