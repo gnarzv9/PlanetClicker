@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum planets { planet0, planet1, planet2, planet3 }
+public enum planets { planet0, planet1, planet2, planet3, planet4 , planet5 }
 public class NewPlanetTransition : MonoBehaviour
 {
     enum planetsName { nothing, Earth, Moon, Sun }
@@ -40,7 +40,6 @@ public class NewPlanetTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (Hp.ChangedHp == true)
             {
                 planetNum++;
@@ -50,6 +49,5 @@ public class NewPlanetTransition : MonoBehaviour
                 ChangeAnimationState(numPlanet.ToString());
                 Debug.Log("Promenio je planetu");    
             }
-            
     }
 }

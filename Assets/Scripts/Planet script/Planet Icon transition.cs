@@ -9,7 +9,7 @@ public class PlanetIcontransition : MonoBehaviour
     [SerializeField] NewPlanetTransition newPlanet;
     private Animator animatorIcon;
     private string currentState;
-    private int numIcon;
+    //private int numIcon;
 
 
     // Start is called before the first frame update
@@ -33,8 +33,8 @@ public class PlanetIcontransition : MonoBehaviour
     {
         if (Hp.ChangedHp == true)
         {
-            numIcon = newPlanet.PlanetNum + 1; //promena broja kasni pa ga ovde takodje moramo dodati za plus 1
-            planets numPlanet = (planets)numIcon;   //biramo mesto koje otvaramo u enumu
+            //numIcon = newPlanet.PlanetNum + 1; //promena broja kasni pa ga ovde takodje moramo dodati za plus 1
+            planets numPlanet = (planets)newPlanet.PlanetNum;   //biramo mesto koje otvaramo u enumu
             ChangeAnimationState(numPlanet.ToString()); 
             Debug.Log("Promenio je ikonicu");
             Debug.Log(numPlanet.ToString());
