@@ -42,7 +42,6 @@ public class HealthBarReachersZero : MonoBehaviour
                 planethealth.CurrentHealth = (int)(planethealth.MaxHealth * 1.5);
                 planethealth.MaxHealth = planethealth.CurrentHealth;
                 healthbar.SetMaxHealth(planethealth.MaxHealth);
-                changedHp = true;
             }
             else
             {
@@ -50,7 +49,8 @@ public class HealthBarReachersZero : MonoBehaviour
                 rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
                 planethealth.CurrentHealth = planethealth.MaxHealth;
             }
+            changedHp = true;
         }
-        else { changedHp = false; }
+        else changedHp = false; 
     }
 }

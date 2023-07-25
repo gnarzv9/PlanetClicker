@@ -14,6 +14,7 @@ public class NewPlanetTransition : MonoBehaviour
     private string currentState;
     private int planetNum = 1;
     [SerializeField] private bool killedBoss = false;
+    [SerializeField] private AnimationClip explosion;
     public int PlanetNum 
     {
         get { return planetNum; }
@@ -33,7 +34,7 @@ public class NewPlanetTransition : MonoBehaviour
         if (currentState == newState) return;
 
         //play the animation
-        animator.Play(newState);
+        animator.Play(newState,0,0f);
     }
 
 
@@ -44,7 +45,7 @@ public class NewPlanetTransition : MonoBehaviour
             {
                 planetNum++;
                 //menjanje imena planete
-                planetsName planetname = (planetsName)planetNum;                          
+                planetsName planetname = (planetsName)planetNum;              
                 if (planetname.ToString() == "boss") // nasao je enum sa imenom boss u sebi
                     {
                         if(killedBoss == false)
@@ -58,14 +59,15 @@ public class NewPlanetTransition : MonoBehaviour
                                 Debug.Log("Ubio je bosa ide u drugi univerzum");
                              }
                     }
+
                 //menja ime planete
                 planetname = (planetsName)planetNum;
                 planetName.text = planetname.ToString();
-                //menja planetu
-                planets numPlanet = (planets)planetNum;
-                ChangeAnimationState(numPlanet.ToString());
-                planetName.text = planetname.ToString();           
-            }
+
+
+            //explodira planeta i menja planeta
+            StartCoroutine(Explosion(planetname));
+        }
     }
     //posle svake pete planete ne menja helte
     public bool OnTheSamePlanet()
@@ -73,5 +75,14 @@ public class NewPlanetTransition : MonoBehaviour
         if (planetNum % 5 == 0)
             return true;
         return false;
+    }
+
+    private IEnumerator Explosion(planetsName planetname)
+    {
+        ChangeAnimationState("planetExplosion");       
+        yield return new WaitForSeconds(explosion.length);
+        planets numPlanet = (planets)planetNum;
+        ChangeAnimationState(numPlanet.ToString());
+        planetName.text = planetname.ToString();
     }
 }
