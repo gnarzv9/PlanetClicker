@@ -1046,7 +1046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -414}
+  m_AnchoredPosition: {x: -224, y: -406}
   m_SizeDelta: {x: 170.82, y: 71.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65127053
@@ -1092,7 +1092,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 65127054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: newScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BossScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &65127054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,8 +1180,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 334.26, y: 442.99}
-  m_SizeDelta: {x: 98.82, y: 74.68}
+  m_AnchoredPosition: {x: 343.79, y: 445.11}
+  m_SizeDelta: {x: 79.75, y: 70.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101046807
 MonoBehaviour:
@@ -1483,7 +1495,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 173772189}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &173772189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,14 +1703,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5754717, g: 0.21444464, b: 0.21444464, a: 1}
+  m_Color: {r: 1, g: 0.6522154, b: 0.08962262, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a8e023b5e66b0d478386a07d1627765, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eda7de4e8a7d7c944bd819c90ddf80b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1762,10 +1786,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: X
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 70e75d4f965c5ec4ca95b95da36f74b2, type: 2}
+  m_sharedMaterial: {fileID: 8918721110144550880, guid: 70e75d4f965c5ec4ca95b95da36f74b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1789,13 +1813,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2217,9 +2241,9 @@ MonoBehaviour:
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
-  m_Elasticity: 0.1
+  m_Elasticity: 1
   m_Inertia: 1
-  m_DecelerationRate: 0.135
+  m_DecelerationRate: 0.5
   m_ScrollSensitivity: 50
   m_Viewport: {fileID: 226096491}
   m_HorizontalScrollbar: {fileID: 0}
@@ -2289,7 +2313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a8e023b5e66b0d478386a07d1627765, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d079911b1ee57944920d7fe9cbcde88, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3170,7 +3194,7 @@ Transform:
   - {fileID: 1679374160}
   - {fileID: 1715435003}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292398116
 GameObject:
@@ -5174,7 +5198,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 464069567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464069567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5853,7 +5889,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7449654405d4f146bd7c01b781e0b3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d0597dac9af4e54b88f5c2d7ce506ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6195,7 +6231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558672137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &558672137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6452,7 +6500,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 589783622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &589783622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8574,7 +8634,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 726018330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &726018330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8966,7 +9038,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746208727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &746208727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9784,7 +9868,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 847209832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &847209832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10516,7 +10612,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newPl: {fileID: 1783489645}
   button: {fileID: 2017598765}
+  transferSceneButton: {fileID: 65127051}
+  clickedOnce: 00000000000000000000000000000000
   panelClosingAnim: {fileID: 7400000, guid: cfb956f72c2bbfd4bb3fded9f4911360, type: 2}
+  ships: {fileID: 1679374159}
+  buttons:
+  - {fileID: 1772174304}
+  - {fileID: 746208726}
+  - {fileID: 1416432877}
+  - {fileID: 1788258255}
+  - {fileID: 928892135}
+  - {fileID: 2011063458}
+  - {fileID: 726018329}
+  - {fileID: 173772188}
+  - {fileID: 558672136}
+  - {fileID: 1083185787}
+  - {fileID: 847209831}
+  - {fileID: 1363677652}
+  - {fileID: 464069566}
+  - {fileID: 589783621}
+  - {fileID: 1885798725}
+  - {fileID: 1166498265}
+  wantedColor: {r: 0.30838373, g: 0.8490566, b: 0.3251265, a: 1}
+  oldColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 0}
 --- !u!1 &908154383
 GameObject:
   m_ObjectHideFlags: 0
@@ -10735,7 +10853,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 928892136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &928892136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12163,7 +12293,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1083185788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1083185788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12825,7 +12967,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1166498266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1166498266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13938,11 +14092,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1761811110}
     m_Modifications:
     - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 384
+      objectReference: {fileID: 0}
+    - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 384
+      objectReference: {fileID: 0}
+    - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 384
       objectReference: {fileID: 0}
     - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13950,11 +14116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 53.600006
       objectReference: {fileID: 0}
     - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 319.03207
+      value: 43974.156
       objectReference: {fileID: 0}
     - target: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14064,6 +14230,11 @@ PrefabInstance:
 --- !u!1 &1345621604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 958225441090354959, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
+  m_PrefabInstance: {fileID: 1345621603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1345621605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 251059711993420400, guid: 07ffb48687888164eb8b070a2656467b, type: 3}
   m_PrefabInstance: {fileID: 1345621603}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361422779
@@ -14440,7 +14611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1363677653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1363677653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15156,7 +15339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1416432878}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1416432878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19221,7 +19416,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.7882353}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -19240,7 +19435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1772174305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1772174305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19383,7 +19590,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1788258256}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1788258256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19480,7 +19699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cbbcea7decaa7547a958219e3c95afe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20545,7 +20764,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1885798726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1885798726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21092,6 +21323,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2113885470}
   - {fileID: 65127052}
   - {fileID: 101046806}
   m_Father: {fileID: 906481906}
@@ -21358,7 +21590,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2011063459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 906481913}
+        m_TargetAssemblyTypeName: EnterTheBoss, Assembly-CSharp
+        m_MethodName: SelectedShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2011063459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22250,6 +22494,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086936846}
+  m_CullTransparentMesh: 1
+--- !u!1 &2113885469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113885470}
+  - component: {fileID: 2113885472}
+  - component: {fileID: 2113885471}
+  m_Layer: 5
+  m_Name: instruction text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2113885470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113885469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1947707837}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 112.84, y: -394.42987}
+  m_SizeDelta: {x: 381, y: 119.88}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2113885471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113885469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Choose 3 ships u wish to fight with
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 70e75d4f965c5ec4ca95b95da36f74b2, type: 2}
+  m_sharedMaterial: {fileID: 8918721110144550880, guid: 70e75d4f965c5ec4ca95b95da36f74b2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2113885472
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113885469}
   m_CullTransparentMesh: 1
 --- !u!1 &2125093915
 GameObject:
@@ -23244,6 +23623,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3269602730379965781, guid: 4d94d43f73e8fe94b85ff8ea76b8f87f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 600609656}
+    - targetCorrespondingSourceObject: {fileID: 3269602730379965781, guid: 4d94d43f73e8fe94b85ff8ea76b8f87f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1345621605}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8179479252213714109, guid: 4d94d43f73e8fe94b85ff8ea76b8f87f, type: 3}
       insertIndex: -1
