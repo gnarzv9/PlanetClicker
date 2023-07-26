@@ -6,7 +6,7 @@ using UnityEngine;
 public enum planets { planet0, planet1, planet2, planet3, planet4 , planet5 } // napraviti poseban enum za boseve
 public class NewPlanetTransition : MonoBehaviour
 {
-    enum planetsName { nothing, Earth, Moon, Sun ,WettyPatty,IceSpice, boss}
+    enum planetsName { nothing, Earth, Moon, Sun ,WettyPatty,IceSpice, boss} //zameniti ovo sa nizom stringova
 
     [SerializeField] private HealthBarReachersZero Hp;
     private Animator animator;

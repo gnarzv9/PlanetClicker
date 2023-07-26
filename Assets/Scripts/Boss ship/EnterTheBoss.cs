@@ -8,29 +8,55 @@ public class EnterTheBoss : MonoBehaviour
 {
     [SerializeField] private NewPlanetTransition newPl;
     [SerializeField] private GameObject button;
+    private bool triggered = false;
+    private Animator animator;
+    private string currentState;
+    [SerializeField] private AnimationClip panelClosingAnim;
 
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
-        GameObject button = GameObject.Find("UISprite");
+        animator = GetComponent<Animator>();
     }
 
-    public void ShowBossButton()
+    void ChangeAnimationState(string newState)
     {
-        if (button != null)
-        {
-            // Get the Image component from the target GameObject
-            Image targetImage = button.GetComponent<Image>();
+        //stop the same aimation from interupting itself
+        if (currentState == newState) return;
 
-            // Now you can access and modify the Image component as needed
-            if (targetImage != null)
-            {
-                if (newPl.BossPlanet() == true)
-                {
-
-                    Debug.Log("postavio sam dugme");
-                    targetImage.enabled = true;
-                }
-            }
-        }
+        //play the animation
+        animator.Play(newState);
     }
+
+    void Update()
+    {
+        if (newPl.BossPlanet() == true && triggered ==false)
+           {
+            Debug.Log("postavio sam dugme");
+            button.SetActive(true);
+            triggered = true;
+           }    
+    }
+
+    public void OpenPanel()
+    {
+        ChangeAnimationState("panelPoping up");
+        button.SetActive(false);
+    }
+
+
+    public void ClosePanel()
+    {
+        ChangeAnimationState("closePanel");
+        StartCoroutine(WaitToClose());
+    }
+
+    public IEnumerator WaitToClose()
+    {
+        yield return new WaitForSeconds(panelClosingAnim.length);
+        triggered = false;
+    }
+
+
 }
