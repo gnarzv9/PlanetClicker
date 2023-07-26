@@ -31,17 +31,11 @@ public class EnterTheBoss : MonoBehaviour
     [SerializeField] Color wantedColor;
     [SerializeField] Color oldColor;
 
-    //animator za novu scenu
-    private Animator LoadingScreenAnim; //dodati da radi
-
-
     // Start is called before the first frame update
     void Start()
     {
         panelAnimator = GetComponent<Animator>();
-        LoadingScreenAnim = GetComponent<Animator>();
     }
-
     void ChangeAnimationState(string newState)
     {
         //stop the same aimation from interupting itself
@@ -49,7 +43,6 @@ public class EnterTheBoss : MonoBehaviour
 
         //play the animation
         panelAnimator.Play(newState);
-        LoadingScreenAnim.Play(newState);
     }
 
     void Update()
@@ -122,6 +115,6 @@ public class EnterTheBoss : MonoBehaviour
 
     public void newScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);       
     }
 }
