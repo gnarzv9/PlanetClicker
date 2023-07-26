@@ -20,9 +20,9 @@ public class AstronautShop : MonoBehaviour
 
     void Start()
     {
-        upgradePrice1 = 500;
-        upgradePrice2 = 500;
-        upgradePrice3 = 500;
+        upgradePrice1 = PlayerPrefs.GetInt("upgradePrice1",500);
+        upgradePrice2 = PlayerPrefs.GetInt("upgradePrice2",500);
+        upgradePrice3 = PlayerPrefs.GetInt("upgradePrice3",500);
     }
 
     private void Update()
@@ -30,6 +30,9 @@ public class AstronautShop : MonoBehaviour
         upgradeText1.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice1);
         upgradeText2.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice2);
         upgradeText3.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice3);
+        PlayerPrefs.SetInt("upgradePrice1",upgradePrice1);
+        PlayerPrefs.SetInt("upgradePrice2",upgradePrice2);
+        PlayerPrefs.SetInt("upgradePrice3",upgradePrice3);
     }
 
     public void UpgradeResourceMultiplier()
