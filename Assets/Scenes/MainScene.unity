@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_Content: {fileID: 1888547378}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 1
   m_Inertia: 1
   m_DecelerationRate: 0.5
@@ -2884,6 +2884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 250
   firstUpgrade: 1000
@@ -3723,6 +3724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 23
   firstUpgrade: 500
@@ -4013,6 +4015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 500
   firstUpgrade: 400
@@ -7266,6 +7269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 344
   firstUpgrade: 10000
@@ -8603,7 +8607,7 @@ MonoBehaviour:
   m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
-  m_DecelerationRate: 0.135
+  m_DecelerationRate: 1
   m_ScrollSensitivity: 50
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
@@ -9584,6 +9588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 40
   firstUpgrade: 250
@@ -11720,6 +11725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 2500
   firstUpgrade: 450
@@ -11876,6 +11882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 20
   firstUpgrade: 600
@@ -12032,6 +12039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 34
   firstUpgrade: 1500
@@ -12323,6 +12331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 20
   firstUpgrade: 20000
@@ -16035,6 +16044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 30
   firstUpgrade: 1000
@@ -16516,6 +16526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 50
   firstUpgrade: 250
@@ -18775,6 +18786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 40
   firstUpgrade: 400
@@ -20794,6 +20806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 70
   shipPrice: 200
   firstUpgrade: 100
@@ -21362,7 +21375,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.000039750004}
-  m_SizeDelta: {x: 620, y: 700}
+  m_SizeDelta: {x: 620, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1909645111
 GameObject:
@@ -21512,6 +21525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 20
   firstUpgrade: 250
@@ -22699,6 +22713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 300
   firstUpgrade: 600
@@ -23326,6 +23341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ae68dda343da64cb984715055b12b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipHp: 0
   shipDmg: 0
   shipPrice: 23
   firstUpgrade: 1020
