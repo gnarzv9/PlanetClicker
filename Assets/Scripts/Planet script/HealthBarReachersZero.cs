@@ -46,7 +46,7 @@ public class HealthBarReachersZero : MonoBehaviour
             else
             {
                 rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() + planethealth.MaxHealth * 0.1));
-                rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
+                rebirth.PreRebirthText.text = numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
                 planethealth.CurrentHealth = planethealth.MaxHealth;
             }
             changedHp = true;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class AstronautShop : MonoBehaviour
+public class AstronautShop : MonoBehaviour, IDataPresistance
 {
     //shop skripta
 
@@ -18,21 +18,27 @@ public class AstronautShop : MonoBehaviour
     public int upgradePrice2;   //cena za upgrejdovanje Automatskog prikupljanja resursa (kolicina)
     public int upgradePrice3;   //cena za upgrejdovanje Automatskog prikupljanja resursa (brzina)
 
-    void Start()
+    IEnumerator Start()
     {
-        upgradePrice1 = PlayerPrefs.GetInt("upgradePrice1",500);
-        upgradePrice2 = PlayerPrefs.GetInt("upgradePrice2",500);
-        upgradePrice3 = PlayerPrefs.GetInt("upgradePrice3",500);
+        yield return new WaitForEndOfFrame();
+        upgradeText1.text = "Cost: " + numbers.AbbreviateNumber(upgradePrice1);
+        upgradeText2.text = "Cost: " + numbers.AbbreviateNumber(upgradePrice2);
+        upgradeText3.text = "Cost: " + numbers.AbbreviateNumber(upgradePrice3);
+        yield return null;
     }
 
-    private void Update()
+    public void LoadData(GameData data)
     {
-        upgradeText1.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice1);
-        upgradeText2.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice2);
-        upgradeText3.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice3);
-        PlayerPrefs.SetInt("upgradePrice1",upgradePrice1);
-        PlayerPrefs.SetInt("upgradePrice2",upgradePrice2);
-        PlayerPrefs.SetInt("upgradePrice3",upgradePrice3);
+        this.upgradePrice1 = data.upgradePrice1;
+        this.upgradePrice2 = data.upgradePrice2;
+        this.upgradePrice3 = data.upgradePrice3;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.upgradePrice1 = this.upgradePrice1;
+        data.upgradePrice2 = this.upgradePrice2;
+        data.upgradePrice3 = this.upgradePrice3;
     }
 
     public void UpgradeResourceMultiplier()
@@ -42,11 +48,13 @@ public class AstronautShop : MonoBehaviour
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.setResourceMultiplier(game.GetResourceMultiplier() + 2);
             upgradePrice1 *= 2;
-            Debug.Log("usao sam1");
+            upgradeText1.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice1);
+            rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
+            Debug.Log("Upgrejdovao sam dugme 1");
         }
         else
         {
-            Debug.Log("nisam usao1");
+            Debug.Log("Nisam upgrejdovao dugme 1");
         }  
     }
 
@@ -57,6 +65,8 @@ public class AstronautShop : MonoBehaviour
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.SetautoResourcesMultiplier(game.GetautoResourcesMultiplier() + 2);
             upgradePrice2 *= 2;
+            upgradeText2.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice2);
+            rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("usao sam2");
         }
         else
@@ -72,6 +82,8 @@ public class AstronautShop : MonoBehaviour
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.SetautoResourceSpeed((float)(game.GetautoResourceSpeed() + 0.2));
             upgradePrice3 *= 2;
+            upgradeText3.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice3);
+            rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("usao sam3");
         }
         else

@@ -6,11 +6,17 @@ using UnityEngine;
 public class RebirthScript : MonoBehaviour, IDataPresistance
 {
 
-    [SerializeField] private int rebirthResource = 0;
+    [SerializeField] private int rebirthResource;
     [SerializeField] public TMP_Text rebirthText;
     [SerializeField] private int PreRebirthResource = 0;
     [SerializeField] public TMP_Text PreRebirthText;
     public FormattingNumbers numbers;
+
+    //public RebirthResource
+    //{
+    //    set{ rebirthResource = value;}
+    //    get{ return rebirthResource;}
+    //}
 
     public void LoadData(GameData data)
     {
@@ -44,26 +50,27 @@ public class RebirthScript : MonoBehaviour, IDataPresistance
         return rebirthResource;
     }
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitForEndOfFrame();
         rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
         PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
+        yield return null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
-        PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
+        //rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
+        //PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
     }
 
     public void Reborn()
     {
-        rebirthResource = PreRebirthResource;
+        rebirthResource += PreRebirthResource;
         PreRebirthResource = 0;
         rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
         PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
     }
-
 
 }

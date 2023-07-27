@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SpaceShip : MonoBehaviour
+public class SpaceShip : MonoBehaviour , IDataPresistance
 {
+    [SerializeField] private string id;
+    [SerializeField] private string idPrice;
+
+
     //objekti u vezi brodova
-    [SerializeField] private int shipHp;
     [SerializeField] private int shipDmg;
     [SerializeField] private int shipPrice;
     [SerializeField] private int firstUpgrade;
@@ -17,16 +20,40 @@ public class SpaceShip : MonoBehaviour
     [SerializeField] TMP_Text priceText;
     [SerializeField] TMP_Text damageText;
 
-    public void Start()
+
+    public void LoadData(GameData data)
     {
+        data.shipDmg.TryGetValue(id, out shipDmg);
+        data.shipPrice.TryGetValue(idPrice, out shipPrice);
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if(data.shipDmg.ContainsKey(id))
+        {
+            data.shipDmg.Remove(id);
+        }
+        if(data.shipPrice.ContainsKey(idPrice))
+        {
+            data.shipPrice.Remove(idPrice);
+        }
+        data.shipPrice.Add(idPrice, shipPrice);
+        data.shipDmg.Add(id, shipDmg);
+    }
+
+    IEnumerator Start()
+    {
+        yield return new WaitForEndOfFrame();
         priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
         damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg";
+        yield return null;
+
     }
 
     public int ShipPrice
     {
         get { return shipPrice; }
-        set { shipPrice = value; }
+        set { shipPrice = value;}
     }
 
     public int ShipDmg

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,18 @@ public class TestShop : MonoBehaviour
     public List<SpaceShip> SpaceShips
     {
         get { return spaceShips; }
+    }
+
+    public void Start()
+    {
+       for(int i = 0; i< NumberOfShips; i++)
+        {
+            if (spaceShips[i].ShipDmg > 0 )
+            {
+                bullets[i].gameObject.GetComponent<SpriteRenderer>().enabled = true; //puc puc se pojavljuje
+                spaceShips[i].gameObject.GetComponent<SpriteRenderer>().enabled = true;  //brod se pojavljuje
+            }
+        }
     }
 
     public void UpgradeShip(int index)
@@ -35,7 +48,6 @@ public class TestShop : MonoBehaviour
             {
                 game.setResource(game.GetResource() - ship.ShipPrice);
                 ship.Upgrade();
-                Debug.Log("Normalan upgrejd");
             }
         }
     }
