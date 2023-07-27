@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public enum planets { planet0, planet1, planet2, planet3, planet4 , planet5 } // napraviti poseban enum za boseve
-public class NewPlanetTransition : MonoBehaviour //, IDataPresistance
+public class NewPlanetTransition : MonoBehaviour, IDataPresistance
 {
     enum planetsName { nothing, Earth, Moon, Sun ,WettyPatty,IceSpice, boss} //zameniti ovo sa nizom stringova
 
@@ -12,7 +12,7 @@ public class NewPlanetTransition : MonoBehaviour //, IDataPresistance
     private Animator animator;
     [SerializeField] private TMP_Text planetName;
     private string currentState;
-    private int planetNum = 1;
+    [SerializeField] private int planetNum = 1;
     [SerializeField] private bool killedBoss = false;
     [SerializeField] private AnimationClip explosion;
     public int PlanetNum 
@@ -20,20 +20,24 @@ public class NewPlanetTransition : MonoBehaviour //, IDataPresistance
         get { return planetNum; }
     }
 
-    //public void LoadData(GameData data)
-    //{
-    //    this.planetNum = data.planetNum;
-    //}
+    public void LoadData(GameData data)
+    {
+        this.planetNum = data.planetNum;
+    }
 
-    //public void SaveData(ref GameData data)
-    //{
-    //    data.planetNum = this.planetNum;
-    //}
+    public void SaveData(ref GameData data)
+    {
+        data.planetNum = this.planetNum;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        ////menja planetu pri ulasku u igricu
+        planets numPlanet = (planets)planetNum;
+        ChangeAnimationState(numPlanet.ToString());
         planetsName planetname = (planetsName)planetNum;
         planetName.text = planetname.ToString();
     }
@@ -46,16 +50,6 @@ public class NewPlanetTransition : MonoBehaviour //, IDataPresistance
         //play the animation
         animator.Play(newState,0,0f);
     }
-
-    //public void Awake()
-    //{
-    //    ////menja planetu pri ulasku u igricu
-    //    planets numPlanet = (planets)planetNum;
-    //    ChangeAnimationState(numPlanet.ToString());
-    //    planetsName planetname = (planetsName)planetNum;
-    //    planetName.text = planetname.ToString();
-    //}
-
 
     // Update is called once per frame
     void Update()

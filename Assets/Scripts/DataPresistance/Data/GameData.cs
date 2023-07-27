@@ -7,7 +7,7 @@ public class GameData
 {
     public int rebirthResource;
     public int preRebirthResource;
- //   public int planetNum;
+    public int planetNum;
 
 
     // the values defined in this constructor will be the default values
@@ -16,6 +16,6 @@ public class GameData
     {
         this.rebirthResource = 0;
         this.preRebirthResource = 0;
- //       this.planetNum = 1;
+        this.planetNum = 1;
     }
 }

@@ -28,8 +28,6 @@ public class EnterTheBoss : MonoBehaviour
 
     //objekti korsiceni za menjanje boje
     [SerializeField] private Button[] buttons;
-    [SerializeField] Color wantedColor;
-    [SerializeField] Color oldColor;
 
     // Start is called before the first frame update
     void Start()
@@ -94,22 +92,10 @@ public class EnterTheBoss : MonoBehaviour
         if (!clickedOnce[index])
         {
             clickedOnce[index] = true;
-            //pokusaj menjanja boje kada je dugme pritisnuto
-            ColorBlock cb = buttons[index].colors;
-            cb.normalColor = wantedColor;
-            cb.highlightedColor = wantedColor;
-            cb.pressedColor = wantedColor;
-            buttons[index].colors = cb;
         }
         else
         {
             clickedOnce[index] = false;
-            //pokusaj menjanja boje kada je dugme pritisnuto
-            ColorBlock cb = buttons[index].colors;
-            cb.normalColor = oldColor;
-            cb.highlightedColor = oldColor;
-            cb.pressedColor = oldColor;
-            buttons[index].colors = cb;
         }
     }
 
