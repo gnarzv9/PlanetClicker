@@ -17,8 +17,7 @@ public class ShipMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-       shipRB=GetComponent<Rigidbody2D>();
-       sr=GetComponent<SpriteRenderer>();
+      
     }
 
     // Update is called once per frame
@@ -33,5 +32,9 @@ public class ShipMovement : MonoBehaviour
         transform.position+= new Vector3(movementX,0f,0f)*Time.deltaTime*speed;  
         movementY=Input.GetAxisRaw("Vertical");
         transform.position+= new Vector3(0f,movementY,0f)*Time.deltaTime*speed;
+    }
+
+    private void FixedUpdate(){
+        shipRB.velocity= new Vector2(movementX,movementY).normalized*speed;
     }
 }
