@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class RebirthScript : MonoBehaviour
+public class RebirthScript : MonoBehaviour, IDataPresistance
 {
 
     [SerializeField] private int rebirthResource = 0;
@@ -11,6 +11,20 @@ public class RebirthScript : MonoBehaviour
     [SerializeField] private int PreRebirthResource = 0;
     [SerializeField] public TMP_Text PreRebirthText;
     public FormattingNumbers numbers;
+
+    public void LoadData(GameData data)
+    {
+        this.rebirthResource = data.rebirthResource;
+        this.PreRebirthResource = data.preRebirthResource;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.rebirthResource = this.rebirthResource;
+        data.preRebirthResource = this.PreRebirthResource;
+    }
+
+
 
     public void setPreRebirthResource(int number)
     {

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public enum planets { planet0, planet1, planet2, planet3, planet4 , planet5 } // napraviti poseban enum za boseve
-public class NewPlanetTransition : MonoBehaviour
+public class NewPlanetTransition : MonoBehaviour //, IDataPresistance
 {
     enum planetsName { nothing, Earth, Moon, Sun ,WettyPatty,IceSpice, boss} //zameniti ovo sa nizom stringova
 
@@ -19,6 +19,16 @@ public class NewPlanetTransition : MonoBehaviour
     {
         get { return planetNum; }
     }
+
+    //public void LoadData(GameData data)
+    //{
+    //    this.planetNum = data.planetNum;
+    //}
+
+    //public void SaveData(ref GameData data)
+    //{
+    //    data.planetNum = this.planetNum;
+    //}
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +47,20 @@ public class NewPlanetTransition : MonoBehaviour
         animator.Play(newState,0,0f);
     }
 
+    //public void Awake()
+    //{
+    //    ////menja planetu pri ulasku u igricu
+    //    planets numPlanet = (planets)planetNum;
+    //    ChangeAnimationState(numPlanet.ToString());
+    //    planetsName planetname = (planetsName)planetNum;
+    //    planetName.text = planetname.ToString();
+    //}
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Hp.ChangedHp == true)   //menjanje planete do bosa
+        if (Hp.ChangedHp == true)   //menjanje planete na smrti
             {
                 planetNum++;
                 //menjanje imena planete
@@ -65,7 +84,7 @@ public class NewPlanetTransition : MonoBehaviour
                 planetName.text = planetname.ToString();
 
 
-            //explodira planeta i menja planeta
+            //explodira planeta i menja planetu
             StartCoroutine(Explosion(planetname));
         }
     }

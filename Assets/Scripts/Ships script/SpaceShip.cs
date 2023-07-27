@@ -39,17 +39,13 @@ public class SpaceShip : MonoBehaviour
     public SpaceShip(int dmg, int price)
     {
         shipDmg = dmg;
-        //PlayerPrefs.GetInt("shipDmg", shipDmg);
         shipPrice = price;
-        //PlayerPrefs.GetInt("shipPrice", shipPrice);
     }
 
     public void Upgrade()
     {
         shipDmg += upgradeValue;
-        //PlayerPrefs.SetInt("shipDmg", shipDmg);
         shipPrice += upgradePrice;
-        //PlayerPrefs.SetInt("shipPrice", shipPrice);
         priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
         damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg";
     }
@@ -57,9 +53,7 @@ public class SpaceShip : MonoBehaviour
     public void FirstUpgrade()
     {
         shipDmg += firstUpgrade;
-        //PlayerPrefs.SetInt("shipDmg", shipDmg);
         shipPrice += upgradePrice;
-        //PlayerPrefs.SetInt("shipPrice", shipPrice);
         priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
         damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg";
     }
