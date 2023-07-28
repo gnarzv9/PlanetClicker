@@ -21,9 +21,9 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
     IEnumerator Start()
     {
         yield return new WaitForEndOfFrame();
-        upgradeText1.text = "Cost: " + numbers.AbbreviateNumber(upgradePrice1);
-        upgradeText2.text = "Cost: " + numbers.AbbreviateNumber(upgradePrice2);
-        upgradeText3.text = "Cost: " + numbers.AbbreviateNumber(upgradePrice3);
+        upgradeText1.text = numbers.AbbreviateNumber(upgradePrice1);
+        upgradeText2.text = numbers.AbbreviateNumber(upgradePrice2);
+        upgradeText3.text = numbers.AbbreviateNumber(upgradePrice3);
         yield return null;
     }
 
@@ -48,7 +48,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
             game.setResourceMultiplier((float)(game.GetResourceMultiplier() + 0.2));
             upgradePrice1 *= 2;
-            upgradeText1.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice1);
+            upgradeText1.text = numbers.AbbreviateNumber((float)upgradePrice1);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("Upgrejdovao sam dugme 1");
         }
@@ -65,7 +65,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice2);
             damage.DmgScaling = (float)(damage.DmgScaling  + 0.1);
             upgradePrice2 *= 2;
-            upgradeText2.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice2);
+            upgradeText2.text = numbers.AbbreviateNumber((float)upgradePrice2);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("Upgrejdovao damage");
         }
@@ -83,7 +83,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice3);
             game.SetautoResourceSpeed((float)(game.GetautoResourceSpeed() + 0.2));
             upgradePrice3 *= 2;
-            upgradeText3.text = "Cost: " + numbers.AbbreviateNumber((float)upgradePrice3);
+            upgradeText3.text = numbers.AbbreviateNumber((float)upgradePrice3);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("usao sam3");
         }
