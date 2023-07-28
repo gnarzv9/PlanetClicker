@@ -14,6 +14,8 @@ public class Planethealth : MonoBehaviour
     float nextTime = 0;
     public FormattingNumbers numbers;
     [SerializeField] private TMP_Text TextHealth;
+    //resursi po dmgu
+    [SerializeField] private ResourcePerDmg damage;
 
     public int MaxHealth
     { get { return maxHealth; }
@@ -37,7 +39,7 @@ public class Planethealth : MonoBehaviour
         TextHealth.text = numbers.AbbreviateNumber(currentHealth) + "\\" + numbers.AbbreviateNumber(maxHealth);
         if (Time.time >= nextTime)  //if napravljen da radi dmg po sekundi
         {
-            TakeDamage((int)(game.GetautoResourcesMultiplier() * game.GetautoResourceSpeed()));
+            TakeDamage((int)(damage.Dmg * game.GetautoResourceSpeed()));
             nextTime += interval;
         }
     }

@@ -58,13 +58,6 @@ public class RebirthScript : MonoBehaviour, IDataPresistance
         yield return null;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
-        //PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
-    }
-
     public void Reborn()
     {
         rebirthResource += PreRebirthResource;

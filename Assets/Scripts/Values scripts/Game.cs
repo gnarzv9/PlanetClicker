@@ -7,16 +7,33 @@ using System;
 using System.Linq;
 
 
-public class Game : MonoBehaviour
+public class Game : MonoBehaviour, IDataPresistance
 {
 
     [SerializeField] private int resources;
     [SerializeField] private TMP_Text resourcesText;
-    [SerializeField] private int resourcesMultiplier = 0;
+    [SerializeField] private float resourcesMultiplier;
     [SerializeField] private GameObject clickeffect;
     [SerializeField] private RectTransform buttonPosition;
-    [SerializeField] private int autoResourcesMultiplier = 0;
-    [SerializeField] private float autoResourceSpeed = 1;
+    [SerializeField] private float AutomaticPower = 1;
+    [SerializeField] private ResourcePerDmg damage;
+
+
+    public void LoadData(GameData data)
+    {
+        this.AutomaticPower = data.AutomaticPower;
+        this.resourcesMultiplier = data.resourcesMultiplier;
+
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.AutomaticPower = this.AutomaticPower;
+        data.resourcesMultiplier = this.resourcesMultiplier;
+    }
+
+
+
 
     public TMP_Text ResourcesText
     {
@@ -25,12 +42,12 @@ public class Game : MonoBehaviour
 
     public FormattingNumbers numbers; //skripta za formatiranje brojeva
 
-    //getteri i setteri
-    public void setResourceMultiplier(int number)
+    //getteri i setteri ulepsati ih jednom
+    public void setResourceMultiplier(float number)
     {
         resourcesMultiplier = number;
     }
-    public int GetResourceMultiplier()
+    public float GetResourceMultiplier()
     {
         return resourcesMultiplier;
     }
@@ -43,23 +60,13 @@ public class Game : MonoBehaviour
     {
         return resources;
     }
-
-    public void SetautoResourcesMultiplier(int number)
-    {
-        autoResourcesMultiplier = number;
-    }
-    public int GetautoResourcesMultiplier()
-    {
-        return autoResourcesMultiplier;
-    }
-
     public void SetautoResourceSpeed(float number)
     {
-        autoResourceSpeed = number;
+        AutomaticPower = number;
     }
     public float GetautoResourceSpeed()
     {
-        return autoResourceSpeed;
+        return AutomaticPower;
     }
 
     // Start is called before the first frame update
@@ -74,16 +81,16 @@ public class Game : MonoBehaviour
         StartCoroutine(GetResourcesAutomatically());
     }
 
-    private void EarnResources(){
-        Instantiate(clickeffect,buttonPosition.position.normalized, Quaternion.identity);
-        resources+= resourcesMultiplier;
-        PlayerPrefs.SetInt("resources",resources);
-        resourcesText.text= numbers.AbbreviateNumber(resources);
+    //private void EarnResources(){
+    //    Instantiate(clickeffect,buttonPosition.position.normalized, Quaternion.identity);
+    //    resources+= resourcesMultiplier;
+    //    PlayerPrefs.SetInt("resources",resources);
+    //    resourcesText.text= numbers.AbbreviateNumber(resources);
 
-    }
+    //}
 
     private IEnumerator GetResourcesAutomatically(){
-        resources+=(int)(autoResourcesMultiplier * autoResourceSpeed);
+        resources+=(int)(AutomaticPower * damage.Dmg * resourcesMultiplier);
         PlayerPrefs.SetInt("resources",resources);
         resourcesText.text= numbers.AbbreviateNumber(resources);
         yield return new WaitForSeconds(1);
@@ -95,7 +102,7 @@ public class Game : MonoBehaviour
             if(PlayerPrefs.HasKey("LastSessionDate")){
                 timeSpan=DateTime.Now-DateTime.Parse(PlayerPrefs.GetString("LastSessionDate"));
                 Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
-                resources+= (int)(autoResourcesMultiplier * autoResourceSpeed * (int)timeSpan.TotalSeconds);
+                resources+= (int)(AutomaticPower * damage.Dmg * resourcesMultiplier * (int)timeSpan.TotalSeconds);
                 PlayerPrefs.SetInt("resources",resources);
                 resourcesText.text= numbers.AbbreviateNumber(resources);
         }

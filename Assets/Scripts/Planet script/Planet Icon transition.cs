@@ -19,7 +19,7 @@ public class PlanetIcontransition : MonoBehaviour
         //kada nadje broj enum sa imenom animacije menja ga
         planets numPlanet = (planets)newPlanet.PlanetNum;
         ChangeAnimationState(numPlanet.ToString());
-        Debug.Log(newPlanet.PlanetNum);
+        Debug.Log("Sacuvan je na planeti broj: " + newPlanet.PlanetNum);
         yield return null;
     }
 

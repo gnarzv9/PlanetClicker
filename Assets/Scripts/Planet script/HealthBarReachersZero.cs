@@ -18,13 +18,21 @@ public class HealthBarReachersZero : MonoBehaviour
     { get { return changedHp; } set { changedHp = value; } }
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        if(planethealth.CurrentHealth <= 0) //dodati kad cuvanje progresa
+        yield return new WaitForEndOfFrame();
+        LastPlanetHealth();
+        yield return null;
+    }
+
+    public void LastPlanetHealth()
+    {
+        for(int i = 1; i < newPlanet.PlanetNum; i++)
         {
-            rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() * planethealth.MaxHealth * 0.1));
-            rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
-            
+            planethealth.CurrentHealth = (int)(planethealth.MaxHealth * 1.5);
+            planethealth.MaxHealth = planethealth.CurrentHealth;
+            healthbar.SetMaxHealth(planethealth.MaxHealth);
+            Debug.Log("povecani helti za " + i + "puta");
         }
     }
 

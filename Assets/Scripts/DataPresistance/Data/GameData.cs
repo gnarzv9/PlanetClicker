@@ -11,6 +11,9 @@ public class GameData
     public int upgradePrice1;  //cena za upgrejdovanje ResourceMultiplier-a
     public int upgradePrice2;  //cena za upgrejdovanje Automatskog prikupljanja resursa (kolicina)
     public int upgradePrice3;  //cena brzine prikljanja
+    public float dmgScaling; //povecavanje dmg po kliku
+    public float AutomaticPower = 1;
+    public float resourcesMultiplier; // skelovanje resursa i dmga
 
     //test za shipove
     public SerializableDictionary<string, int> shipDmg;
@@ -28,5 +31,8 @@ public class GameData
         this.upgradePrice1 = 500;
         this.upgradePrice2 = 500;
         this.upgradePrice3 = 500;
+        this.dmgScaling = 1;
+        this.AutomaticPower = 0;
+        this.resourcesMultiplier = 0.2f;
     }
 }
