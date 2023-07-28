@@ -14,16 +14,29 @@ public class ShipMovement : MonoBehaviour
         private SpriteRenderer sr;
         [SerializeField]
         private Rigidbody2D shipRB;
-    // Start is called before the first frame update
-    private void Awake()
-    {
-      
-    }
+
+        [SerializeField]
+        private GameObject bulletPrefab;
+        [SerializeField]
+        private Transform firingPoint;
+        [Range(0.1f,1f)]
+        [SerializeField]
+        private float fireRate=0.5f;
+
+        private float fireTimer;
+    
 
     // Update is called once per frame
     void Update()
     {
         SpaceshipMovement();
+
+        if(Input.GetMouseButtonDown(0) && fireTimer<=0f){
+            Shoot();
+            fireTimer=fireRate;
+        }else{
+            fireTimer-=Time.deltaTime;
+        }
     }
 
     void SpaceshipMovement(){
@@ -36,5 +49,9 @@ public class ShipMovement : MonoBehaviour
 
     private void FixedUpdate(){
         shipRB.velocity= new Vector2(movementX,movementY).normalized*speed;
+    }
+
+    private void Shoot(){
+        Instantiate(bulletPrefab, firingPoint.position,firingPoint.rotation);
     }
 }

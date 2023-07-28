@@ -14,6 +14,7 @@ public class BossAttack : MonoBehaviour
     public float fireRate=0.5f;
     private float timeToFire;
     public Transform firingPoint;
+    public GameObject bulletPrefab;
 
     private void start(){
         rb=GetComponent<Rigidbody2D>();
@@ -33,6 +34,7 @@ public class BossAttack : MonoBehaviour
 
     private void Shoot(){
         if(timeToFire<=0f){
+            Instantiate(bulletPrefab, firingPoint.position,firingPoint.rotation);
             Debug.Log("Shoot");
             timeToFire=fireRate;  
         }else{
