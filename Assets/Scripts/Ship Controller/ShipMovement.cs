@@ -52,6 +52,6 @@ public class ShipMovement : MonoBehaviour
     }
 
     private void Shoot(){
-        Instantiate(bulletPrefab, firingPoint.position,firingPoint.rotation);
+        Instantiate(bulletPrefab, firingPoint.position,Quaternion.identity);
     }
 }
