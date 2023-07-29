@@ -15,6 +15,7 @@ public class BossAttack : MonoBehaviour
     private float timeToFire;
     public Transform firingPoint;
     public GameObject bulletPrefab;
+    public int bossHealth=100;
 
     private void start(){
         rb=GetComponent<Rigidbody2D>();
@@ -70,8 +71,11 @@ public class BossAttack : MonoBehaviour
             Destroy(other.gameObject);
             target=null;
         }else if(other.gameObject.CompareTag("Bullet")){
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            bossHealth-=10;
         }
+        if(bossHealth ==0){
+         Destroy(other.gameObject);
+            Destroy(gameObject);
+        }   
     }
 }
