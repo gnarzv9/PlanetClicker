@@ -430,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1645.4001}
+  m_AnchoredPosition: {x: 100, y: -1830.4001}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12941252
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2171,7 +2171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2619,7 +2619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -784.2}
+  m_AnchoredPosition: {x: 100, y: -966.19995}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253270159
@@ -3002,9 +3002,9 @@ MonoBehaviour:
   id: ship5dmg
   idPrice: shipPrice5
   shipDmg: 0
-  shipPrice: 250
-  firstUpgrade: 1000
-  upgradeValue: 20
+  shipPrice: 7500
+  firstUpgrade: 500
+  upgradeValue: 400
   upgradePrice: 50
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1527068122}
@@ -3961,8 +3961,8 @@ MonoBehaviour:
   idPrice: shipPrice11
   shipDmg: 0
   shipPrice: 23
-  firstUpgrade: 500
-  upgradeValue: 233
+  firstUpgrade: 2000
+  upgradeValue: 5000
   upgradePrice: 40
   numbers: {fileID: 1608010956}
   priceText: {fileID: 233020892}
@@ -4173,7 +4173,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1549254135}
+  - {fileID: 1361422780}
   - {fileID: 439518849}
   - {fileID: 454686041}
   - {fileID: 866715488}
@@ -4196,7 +4196,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 233, y: 0}
-  m_SizeDelta: {x: 100, y: 3225.8003}
+  m_SizeDelta: {x: 100, y: 3640.8005}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &383239454
 MonoBehaviour:
@@ -4213,10 +4213,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: -127
-    m_Bottom: -192
+    m_Top: 52
+    m_Bottom: 32
   m_ChildAlignment: 0
-  m_Spacing: 115.3
+  m_Spacing: 116.05
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -4427,9 +4427,9 @@ MonoBehaviour:
   id: ship2dmg
   idPrice: shipPrice2
   shipDmg: 0
-  shipPrice: 500
-  firstUpgrade: 400
-  upgradeValue: 200
+  shipPrice: 1500
+  firstUpgrade: 200
+  upgradeValue: 50
   upgradePrice: 200
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1119837473}
@@ -5029,7 +5029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -138.3}
+  m_AnchoredPosition: {x: 100, y: -318.05}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439518850
@@ -5299,7 +5299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -353.6}
+  m_AnchoredPosition: {x: 100, y: -534.1}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454686042
@@ -5454,7 +5454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 14
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5913,7 +5913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -2937.2004}
+  m_AnchoredPosition: {x: 100, y: -3126.7004}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490306094
@@ -6908,7 +6908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7778,8 +7778,8 @@ MonoBehaviour:
   idPrice: shipPrice15
   shipDmg: 0
   shipPrice: 344
-  firstUpgrade: 10000
-  upgradeValue: 22
+  firstUpgrade: 5000
+  upgradeValue: 100000
   upgradePrice: 33
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1994190223}
@@ -8602,7 +8602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -2076.0002}
+  m_AnchoredPosition: {x: 100, y: -2262.5002}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &654374495
@@ -9672,7 +9672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -2506.6003}
+  m_AnchoredPosition: {x: 100, y: -2694.6003}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744220635
@@ -10037,7 +10037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10152,7 +10152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -999.5}
+  m_AnchoredPosition: {x: 100, y: -1182.25}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763256648
@@ -10476,10 +10476,10 @@ MonoBehaviour:
   id: ship3dmg
   idPrice: shipPrice3
   shipDmg: 0
-  shipPrice: 40
-  firstUpgrade: 250
-  upgradeValue: 70
-  upgradePrice: 60
+  shipPrice: 2500
+  firstUpgrade: 400
+  upgradeValue: 100
+  upgradePrice: 300
   numbers: {fileID: 1608010956}
   priceText: {fileID: 610520649}
   damageText: {fileID: 740953244}
@@ -10655,7 +10655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1860.7002}
+  m_AnchoredPosition: {x: 100, y: -2046.4502}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789476569
@@ -10795,6 +10795,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -3.4150085}
   m_SizeDelta: {x: 869.92, y: 1209.4102}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &800894667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800894668}
+  - component: {fileID: 800894670}
+  - component: {fileID: 800894669}
+  m_Layer: 5
+  m_Name: Image (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &800894668
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800894667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1288778892}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -500.00012, y: 3381.8003}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &800894669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800894667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc9139d74e01e36429958cb8058e7768, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &800894670
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800894667}
+  m_CullTransparentMesh: 1
 --- !u!1 &831521037
 GameObject:
   m_ObjectHideFlags: 0
@@ -11260,7 +11336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -568.9}
+  m_AnchoredPosition: {x: 100, y: -750.14996}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866715489
@@ -11967,7 +12043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -2721.9004}
+  m_AnchoredPosition: {x: 100, y: -2910.6504}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908154385
@@ -12808,8 +12884,8 @@ MonoBehaviour:
   idPrice: shipPrice12
   shipDmg: 0
   shipPrice: 2500
-  firstUpgrade: 450
-  upgradeValue: 100
+  firstUpgrade: 2500
+  upgradeValue: 6000
   upgradePrice: 100
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1118129651}
@@ -12965,10 +13041,10 @@ MonoBehaviour:
   id: ship4dmg
   idPrice: shipPrice4
   shipDmg: 0
-  shipPrice: 20
-  firstUpgrade: 600
-  upgradeValue: 100
-  upgradePrice: 200
+  shipPrice: 5000
+  firstUpgrade: 450
+  upgradeValue: 200
+  upgradePrice: 500
   numbers: {fileID: 1608010956}
   priceText: {fileID: 539224753}
   damageText: {fileID: 280515913}
@@ -13124,8 +13200,8 @@ MonoBehaviour:
   idPrice: shipPrice14
   shipDmg: 0
   shipPrice: 34
-  firstUpgrade: 1500
-  upgradeValue: 5423
+  firstUpgrade: 3500
+  upgradeValue: 50000
   upgradePrice: 233
   numbers: {fileID: 1608010956}
   priceText: {fileID: 211312313}
@@ -13493,8 +13569,8 @@ MonoBehaviour:
   idPrice: shipPrice13
   shipDmg: 0
   shipPrice: 20
-  firstUpgrade: 20000
-  upgradeValue: 20
+  firstUpgrade: 3000
+  upgradeValue: 10000
   upgradePrice: 20
   numbers: {fileID: 1608010956}
   priceText: {fileID: 2013450848}
@@ -13537,7 +13613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -3152.5005}
+  m_AnchoredPosition: {x: 100, y: -3342.7505}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051950468
@@ -14604,7 +14680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1430.1001}
+  m_AnchoredPosition: {x: 100, y: -1614.3501}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120059801
@@ -15920,7 +15996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16192,12 +16268,13 @@ RectTransform:
   - {fileID: 1838402573}
   - {fileID: 1399868082}
   - {fileID: 1255971388}
+  - {fileID: 800894668}
   m_Father: {fileID: 383239453}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -3367.8005}
+  m_AnchoredPosition: {x: 100, y: -3558.8005}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1294133666
@@ -16596,12 +16673,12 @@ RectTransform:
   m_Children:
   - {fileID: 447064160}
   - {fileID: 1407764683}
-  m_Father: {fileID: 1549254135}
+  m_Father: {fileID: 383239453}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: 165.30002}
+  m_AnchoredPosition: {x: 100, y: -102}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361422781
@@ -16776,7 +16853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 9
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17409,7 +17486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 12
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18059,8 +18136,8 @@ MonoBehaviour:
   idPrice: shipPrice6
   shipDmg: 0
   shipPrice: 30
-  firstUpgrade: 1000
-  upgradeValue: 30
+  firstUpgrade: 650
+  upgradeValue: 500
   upgradePrice: 30
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1030319236}
@@ -18123,7 +18200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 70e75d4f965c5ec4ca95b95da36f74b2, type: 2}
   m_sharedMaterial: {fileID: 8918721110144550880, guid: 70e75d4f965c5ec4ca95b95da36f74b2, type: 2}
@@ -18617,10 +18694,10 @@ MonoBehaviour:
   id: ship1dmg
   idPrice: shipPrice1
   shipDmg: 0
-  shipPrice: 50
-  firstUpgrade: 250
-  upgradeValue: 50
-  upgradePrice: 50
+  shipPrice: 500
+  firstUpgrade: 140
+  upgradeValue: 25
+  upgradePrice: 100
   numbers: {fileID: 1608010956}
   priceText: {fileID: 627853521}
   damageText: {fileID: 27830231}
@@ -19254,43 +19331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542006028}
   m_CullTransparentMesh: 1
---- !u!1 &1549254134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1549254135}
-  m_Layer: 5
-  m_Name: bt1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1549254135
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549254134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1361422780}
-  m_Father: {fileID: 383239453}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: 77}
-  m_SizeDelta: {x: 200, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1553056231
 GameObject:
   m_ObjectHideFlags: 0
@@ -19349,7 +19389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 13
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20313,7 +20353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 11
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20963,8 +21003,8 @@ MonoBehaviour:
   idPrice: shipPrice10
   shipDmg: 0
   shipPrice: 40
-  firstUpgrade: 400
-  upgradeValue: 40
+  firstUpgrade: 1500
+  upgradeValue: 4000
   upgradePrice: 40
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1533972186}
@@ -21508,7 +21548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -2291.3003}
+  m_AnchoredPosition: {x: 100, y: -2478.5503}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707184980
@@ -21883,7 +21923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23030,7 +23070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23441,9 +23481,9 @@ MonoBehaviour:
   idPrice: shipPrice0
   shipDmg: 70
   shipPrice: 200
-  firstUpgrade: 100
-  upgradeValue: 20
-  upgradePrice: 20
+  firstUpgrade: 0
+  upgradeValue: 5
+  upgradePrice: 50
   numbers: {fileID: 1608010956}
   priceText: {fileID: 447064161}
   damageText: {fileID: 1407764684}
@@ -23581,7 +23621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23802,7 +23842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1214.8}
+  m_AnchoredPosition: {x: 100, y: -1398.3}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884927052
@@ -24237,8 +24277,8 @@ MonoBehaviour:
   idPrice: shipPrice8
   shipDmg: 0
   shipPrice: 20
-  firstUpgrade: 250
-  upgradeValue: 400
+  firstUpgrade: 1000
+  upgradeValue: 1500
   upgradePrice: 20
   numbers: {fileID: 1608010956}
   priceText: {fileID: 1227343780}
@@ -24301,7 +24341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24436,7 +24476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ship 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25578,8 +25618,8 @@ MonoBehaviour:
   idPrice: shipPrice9
   shipDmg: 0
   shipPrice: 300
-  firstUpgrade: 600
-  upgradeValue: 100
+  firstUpgrade: 1200
+  upgradeValue: 2000
   upgradePrice: 340
   numbers: {fileID: 1608010956}
   priceText: {fileID: 3748424}
@@ -25845,7 +25885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -500.00012, y: 3181.8003}
+  m_AnchoredPosition: {x: -500.00012, y: 3163.801}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057509942
@@ -25868,7 +25908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc9139d74e01e36429958cb8058e7768, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e9d17674fbc7844d93ccf920e01a34e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26360,9 +26400,9 @@ MonoBehaviour:
   idPrice: shipPrice7
   shipDmg: 0
   shipPrice: 23
-  firstUpgrade: 1020
-  upgradeValue: 500
-  upgradePrice: 399
+  firstUpgrade: 800
+  upgradeValue: 150
+  upgradePrice: 1000
   numbers: {fileID: 1608010956}
   priceText: {fileID: 892279369}
   damageText: {fileID: 1555104707}

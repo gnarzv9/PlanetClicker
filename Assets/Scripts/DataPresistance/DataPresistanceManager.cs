@@ -72,6 +72,11 @@ public class DataPresistanceManager : MonoBehaviour
         SaveGame();
     }
 
+    private void OnApplicationPause()
+    {
+        SaveGame();
+    }
+
     private List<IDataPresistance> FindAllDataPersistanceObjects()
     {
         IEnumerable<IDataPresistance> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>()

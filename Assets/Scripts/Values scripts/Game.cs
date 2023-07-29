@@ -23,6 +23,7 @@ public class Game : MonoBehaviour, IDataPresistance
     {
         this.AutomaticPower = data.AutomaticPower;
         this.resourcesMultiplier = data.resourcesMultiplier;
+        this.resources = data.resource;
 
     }
 
@@ -30,9 +31,8 @@ public class Game : MonoBehaviour, IDataPresistance
     {
         data.AutomaticPower = this.AutomaticPower;
         data.resourcesMultiplier = this.resourcesMultiplier;
+        data.resource = this.resources;
     }
-
-
 
 
     public TMP_Text ResourcesText
@@ -91,7 +91,6 @@ public class Game : MonoBehaviour, IDataPresistance
 
     private IEnumerator GetResourcesAutomatically(){
         resources+=(int)(AutomaticPower * damage.Dmg * resourcesMultiplier);
-        PlayerPrefs.SetInt("resources",resources);
         resourcesText.text= numbers.AbbreviateNumber(resources);
         yield return new WaitForSeconds(1);
         StartCoroutine(GetResourcesAutomatically());
@@ -103,20 +102,7 @@ public class Game : MonoBehaviour, IDataPresistance
                 timeSpan=DateTime.Now-DateTime.Parse(PlayerPrefs.GetString("LastSessionDate"));
                 Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
                 resources+= (int)(AutomaticPower * damage.Dmg * resourcesMultiplier * (int)timeSpan.TotalSeconds);
-                PlayerPrefs.SetInt("resources",resources);
                 resourcesText.text= numbers.AbbreviateNumber(resources);
         }
     }
-
-    #if UNITY_ANDROID && !UNITY_EDITOR
-    private void OnApplicationPause(bool pause){
-        if (pause)
-        PlayerPrefs.SetString("LastSessionDate",DateTime.Now.ToString());
-    }
-
-    #else
-    private void OnApplicationQuit(){
-        PlayerPrefs.SetString("LastSessionDate",DateTime.Now.ToString());
-    }
-    #endif
 }
