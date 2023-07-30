@@ -10,7 +10,7 @@ public class BossAttack : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
     public float distanceToStop=3f;
-    public float distanceToShoot=6f;
+    public float distanceToShoot=8f;
     public float fireRate=0.5f;
     private float timeToFire;
     public Transform firingPoint;
