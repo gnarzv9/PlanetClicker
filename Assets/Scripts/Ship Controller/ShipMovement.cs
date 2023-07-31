@@ -52,6 +52,12 @@ public class ShipMovement : MonoBehaviour
     }
 
     private void Shoot(){
-        Instantiate(bulletPrefab, firingPoint.position,Quaternion.identity);
+        Instantiate(bulletPrefab, firingPoint.position,firingPoint.rotation);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other){
+        if (other.gameObject.CompareTag("EnemyBullet")){
+            Destroy(gameObject);
+        }
     }
 }

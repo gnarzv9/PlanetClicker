@@ -67,10 +67,10 @@ public class BossAttack : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.CompareTag("Ship")){
+        if (other.gameObject.CompareTag("Ship")){
             Destroy(other.gameObject);
-            target=null;
-        }else if(other.gameObject.CompareTag("Bullet")){
+        }
+        if(other.gameObject.CompareTag("Bullet")){
             bossHealth-=10;
         }
         if(bossHealth ==0){
