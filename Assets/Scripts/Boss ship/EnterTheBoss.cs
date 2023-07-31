@@ -30,6 +30,11 @@ public class EnterTheBoss : MonoBehaviour
     //objekti korsiceni za menjanje boje
     [SerializeField] private Button[] buttons;
 
+    public bool[] ClickedOnce
+    {
+        get { return clickedOnce; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
