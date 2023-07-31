@@ -39,7 +39,7 @@ public class Planethealth : MonoBehaviour
         TextHealth.text = numbers.AbbreviateNumber(currentHealth) + "\\" + numbers.AbbreviateNumber(maxHealth);
         if (Time.time >= nextTime)  //if napravljen da radi dmg po sekundi
         {
-            TakeDamage((int)(damage.Dmg * game.GetautoResourceSpeed()));
+            TakeDamage((int)(damage.Dmg * game.GetAutomaticPower()));
             nextTime += interval;
         }
     }

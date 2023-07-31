@@ -12,7 +12,7 @@ public class GameData
     public int upgradePrice2;  //cena za upgrejdovanje Automatskog prikupljanja resursa (kolicina)
     public int upgradePrice3;  //cena brzine prikljanja
     public float dmgScaling; //povecavanje dmg po kliku
-    public float AutomaticPower = 1;
+    public float AutomaticPower;
     public float resourcesMultiplier; // skelovanje resursa i dmga
     public int resource;
 
@@ -48,11 +48,11 @@ public class GameData
         shipPrice.Add("shipPrice15", 1000000000);
 
         this.resource = 0;
-        this.upgradePrice1 = 500;
-        this.upgradePrice2 = 500;
-        this.upgradePrice3 = 500;
+        this.upgradePrice1 = 10000;
+        this.upgradePrice2 = 10000;
+        this.upgradePrice3 = 10000;
         this.dmgScaling = 1;
         this.AutomaticPower = 0;
-        this.resourcesMultiplier = 0.2f;
+        this.resourcesMultiplier = 0.1f;
     }
 }

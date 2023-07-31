@@ -38,10 +38,10 @@ public class TestShop : MonoBehaviour
         {
             if (ship.gameObject.GetComponent<SpriteRenderer>().enabled == false) // proverava da li je sprite render ugasen
             {
-                ship.FirstUpgrade();
                 bullets[index].gameObject.GetComponent<SpriteRenderer>().enabled = true; //puc puc se pojavljuje
                 ship.gameObject.GetComponent<SpriteRenderer>().enabled = true;  //brod se pojavljuje
                 game.setResource(game.GetResource() - ship.ShipPrice);
+                ship.FirstUpgrade();
                 Debug.Log("Prvi put upgrejdovao ship ");
             }
             else

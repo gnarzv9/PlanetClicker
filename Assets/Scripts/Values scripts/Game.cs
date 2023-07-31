@@ -60,11 +60,11 @@ public class Game : MonoBehaviour, IDataPresistance
     {
         return resources;
     }
-    public void SetautoResourceSpeed(float number)
+    public void SetAutomaticPower(float number)
     {
         AutomaticPower = number;
     }
-    public float GetautoResourceSpeed()
+    public float GetAutomaticPower()
     {
         return AutomaticPower;
     }

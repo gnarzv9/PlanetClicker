@@ -46,7 +46,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
         if (rebirth.GetRebirthResource() >= upgradePrice1) 
         {
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice1);
-            game.setResourceMultiplier((float)(game.GetResourceMultiplier() + 0.2));
+            game.setResourceMultiplier((float)(game.GetResourceMultiplier() + 0.1));
             upgradePrice1 *= 2;
             upgradeText1.text = numbers.AbbreviateNumber((float)upgradePrice1);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
@@ -58,7 +58,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
         }  
     }
     //povecava dmg
-    public void UpgradeAutoResourceMultiplier()
+    public void UpgradeDamageScaling()
     {
         if (rebirth.GetRebirthResource() >= upgradePrice2)
         {
@@ -76,12 +76,12 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
     }
 
     //dodaje auto resource i njenu brzinu skupjanja
-    public void UpgradeAutoResourceSpeed()
+    public void UpgradeAutomaticPower()
     {
         if (rebirth.GetRebirthResource() >= upgradePrice3)
         {
             rebirth.SetRebirthResource(rebirth.GetRebirthResource() - upgradePrice3);
-            game.SetautoResourceSpeed((float)(game.GetautoResourceSpeed() + 0.2));
+            game.SetAutomaticPower((float)(game.GetAutomaticPower() + 0.1)); //
             upgradePrice3 *= 2;
             upgradeText3.text = numbers.AbbreviateNumber((float)upgradePrice3);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());

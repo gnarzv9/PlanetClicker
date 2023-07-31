@@ -72,10 +72,10 @@ public class DataPresistanceManager : MonoBehaviour
         SaveGame();
     }
 
-    private void OnApplicationPause()
-    {
-        SaveGame();
-    }
+    //private void OnApplicationPause()
+    //{
+    //    SaveGame();
+    //}
 
     private List<IDataPresistance> FindAllDataPersistanceObjects()
     {
