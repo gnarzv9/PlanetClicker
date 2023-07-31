@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProgressShop : MonoBehaviour
+public class BossShipsToPick : MonoBehaviour
 {
     [SerializeField] private TestShop shop;
-    public GameObject[] buttons;
-    private void Update()
+    [SerializeField] private GameObject[] BossButton;
+
+    // Update is called once per frame
+    void Update()
     {
         for (int i = 0; i < shop.NumberOfShips; i++)
         {
             if (shop.SpaceShips[i].ShipDmg <= 0)
             {
-                buttons[i + 1].SetActive(false);
+                BossButton[i].SetActive(false);
             }
             else
-            {
-                buttons[i + 1].SetActive(true);
-            }
+                BossButton[i].SetActive(true);
         }
     }
 }
