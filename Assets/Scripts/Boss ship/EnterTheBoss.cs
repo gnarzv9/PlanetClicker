@@ -19,8 +19,11 @@ public class EnterTheBoss : MonoBehaviour
     //bool niz za cuvanje izabranih shipova
     private const int numberOfShips = 15;
     [SerializeField] private bool[] clickedOnce = new bool[numberOfShips];
+    //skirvanje shipova i buttona za ostale shopove
     [SerializeField] private GameObject hideShips;
-    
+    [SerializeField] private GameObject otherButton1;
+    [SerializeField] private GameObject otherButton2;
+
     //za animaciju panela
     private Animator panelAnimator;
     private string currentState;
@@ -79,6 +82,8 @@ public class EnterTheBoss : MonoBehaviour
         ChangeAnimationState("panelPoping up");
         button.SetActive(false);
         hideShips.SetActive(false);
+        otherButton1.SetActive(false);
+        otherButton2.SetActive(false);
     }
 
     //zatvara panel koji se pojavio
@@ -92,6 +97,8 @@ public class EnterTheBoss : MonoBehaviour
     {
         yield return new WaitForSeconds(panelClosingAnim.length);
         hideShips.SetActive(true);
+        otherButton1.SetActive(true);
+        otherButton2.SetActive(true);
         triggered = false;
     }
     //checkira shipove koje je aktivirao
