@@ -5,12 +5,13 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
         [SerializeField]
-        private float speed=6f;
+        private float speed=3f;
         [SerializeField]
         private float movementX;
         [SerializeField]
         private float movementY;
-
+        [SerializeField]
+        private int shipHealth=3;
         private SpriteRenderer sr;
         [SerializeField]
         private Rigidbody2D shipRB;
@@ -24,6 +25,7 @@ public class ShipMovement : MonoBehaviour
         private float fireRate=0.5f;
 
         private float fireTimer;
+        
     
 
     // Update is called once per frame
@@ -56,7 +58,12 @@ public class ShipMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.CompareTag("EnemyBullet")){
+        if(other.gameObject.CompareTag("BulletEnemy")){
+            shipHealth--;
+            Destroy(other.gameObject);
+        }
+        if(shipHealth==0){
+         Destroy(other.gameObject);
             Destroy(gameObject);
         }
     }
