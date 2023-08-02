@@ -50,6 +50,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             upgradePrice1 *= 2;
             upgradeText1.text = numbers.AbbreviateNumber((float)upgradePrice1);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
+            rebirth.shopRebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("Upgrejdovao sam dugme 1");
         }
         else
@@ -67,6 +68,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             upgradePrice2 *= 2;
             upgradeText2.text = numbers.AbbreviateNumber((float)upgradePrice2);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
+            rebirth.shopRebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("Upgrejdovao damage");
         }
         else
@@ -85,6 +87,7 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             upgradePrice3 *= 2;
             upgradeText3.text = numbers.AbbreviateNumber((float)upgradePrice3);
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
+            rebirth.shopRebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("usao sam3");
         }
         else

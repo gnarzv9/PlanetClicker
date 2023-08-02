@@ -12,6 +12,10 @@ public class RebirthScript : MonoBehaviour, IDataPresistance
     [SerializeField] public TMP_Text PreRebirthText;
     public FormattingNumbers numbers;
 
+    //za shop Rebirth text
+    [SerializeField] public TMP_Text shopRebirthText;
+    [SerializeField] public TMP_Text shopPreRebirthText;
+
     //public RebirthResource
     //{
     //    set{ rebirthResource = value;}
@@ -54,7 +58,9 @@ public class RebirthScript : MonoBehaviour, IDataPresistance
     {
         yield return new WaitForEndOfFrame();
         rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
+        shopRebirthText.text = numbers.AbbreviateNumber(rebirthResource);
         PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
+        shopPreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
         yield return null;
     }
 
@@ -64,6 +70,8 @@ public class RebirthScript : MonoBehaviour, IDataPresistance
         PreRebirthResource = 0;
         rebirthText.text = numbers.AbbreviateNumber(rebirthResource);
         PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
+        shopRebirthText.text = numbers.AbbreviateNumber(rebirthResource);
+        shopPreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
     }
 
 }

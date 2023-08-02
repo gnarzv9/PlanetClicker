@@ -46,6 +46,7 @@ public class HealthBarReachersZero : MonoBehaviour
             {
                 rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() + planethealth.MaxHealth * 0.1));
                 rebirth.PreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
+                rebirth.shopPreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
                 Debug.Log("Dodao sam: " + planethealth.MaxHealth * 0.1);
                 planethealth.CurrentHealth = (int)(planethealth.MaxHealth * 1.5);
                 planethealth.MaxHealth = planethealth.CurrentHealth;
@@ -55,6 +56,7 @@ public class HealthBarReachersZero : MonoBehaviour
             {
                 rebirth.setPreRebirthResource((int)(rebirth.GetPreRebirthResource() + planethealth.MaxHealth * 0.1));
                 rebirth.PreRebirthText.text = numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
+                rebirth.shopPreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
                 planethealth.CurrentHealth = planethealth.MaxHealth;
             }
             changedHp = true;
