@@ -12,6 +12,7 @@ public class Game : MonoBehaviour, IDataPresistance
 
     [SerializeField] private int resources;
     [SerializeField] private TMP_Text resourcesText;
+    [SerializeField] private TMP_Text resourcesText2;
     [SerializeField] private float resourcesMultiplier;
     [SerializeField] private GameObject clickeffect;
     [SerializeField] private RectTransform buttonPosition;
@@ -75,6 +76,7 @@ public class Game : MonoBehaviour, IDataPresistance
         if(PlayerPrefs.HasKey("resources")){
          resources=PlayerPrefs.GetInt("resources");
          resourcesText.text=numbers.AbbreviateNumber(resources);
+         resourcesText2.text = numbers.AbbreviateNumber(resources);
         }
 
         CountResourcesFromOffline();
@@ -92,6 +94,7 @@ public class Game : MonoBehaviour, IDataPresistance
     private IEnumerator GetResourcesAutomatically(){
         resources+=(int)(AutomaticPower * damage.Dmg * resourcesMultiplier);
         resourcesText.text= numbers.AbbreviateNumber(resources);
+        resourcesText2.text = numbers.AbbreviateNumber(resources);
         yield return new WaitForSeconds(1);
         StartCoroutine(GetResourcesAutomatically());
     }
@@ -103,6 +106,7 @@ public class Game : MonoBehaviour, IDataPresistance
                 Debug.Log($"You haven't been online for {timeSpan.Days} days, {timeSpan.Hours} hours, {timeSpan.Minutes} minutes, {timeSpan.Seconds} seconds.");
                 resources+= (int)(AutomaticPower * damage.Dmg * resourcesMultiplier * (int)timeSpan.TotalSeconds);
                 resourcesText.text= numbers.AbbreviateNumber(resources);
+                resourcesText2.text = numbers.AbbreviateNumber(resources);
         }
     }
 }

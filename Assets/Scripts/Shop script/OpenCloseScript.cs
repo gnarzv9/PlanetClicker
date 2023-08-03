@@ -9,6 +9,7 @@ public class OpenCloseScript : MonoBehaviour
     [SerializeField] private GameObject otherButton1;
     [SerializeField] private GameObject otherButton2;
     [SerializeField] private GameObject otherButton3;
+    [SerializeField] private GameObject otherButton4;
 
     public void OpenShop()
     {
@@ -17,6 +18,7 @@ public class OpenCloseScript : MonoBehaviour
         otherButton1.SetActive(false);
         otherButton2.SetActive(false);
         otherButton3.SetActive(false);
+        otherButton4.SetActive(true);
     }
 
     public void CloseShop()
@@ -26,6 +28,7 @@ public class OpenCloseScript : MonoBehaviour
         otherButton1.SetActive(true);
         otherButton2.SetActive(true);
         otherButton3.SetActive(true);
+        otherButton4.SetActive(false);
     }
 
 

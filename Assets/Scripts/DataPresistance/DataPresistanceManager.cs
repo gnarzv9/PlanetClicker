@@ -58,13 +58,42 @@ public class DataPresistanceManager : MonoBehaviour
 
     public void SaveGame()
     {
-        //TODO - pass the data to other scripts so they can update it
+        // Check if dataPersistanceObjects is null or empty
+        if (dataPersistanceObjects == null || dataPersistanceObjects.Count == 0)
+        {
+            Debug.LogWarning("No data persistence objects found.");
+            return;
+        }
+
+        // Check if gameData is null
+        if (gameData == null)
+        {
+            Debug.LogWarning("GameData is null. Cannot save.");
+            return;
+        }
+
+        // Pass the data to other scripts to update it
         foreach (IDataPresistance dataPersistenceObj in dataPersistanceObjects)
         {
-            dataPersistenceObj.SaveData(ref gameData);
+            if (dataPersistenceObj != null)
+            {
+                dataPersistenceObj.SaveData(ref gameData);
+            }
+            else
+            {
+                Debug.LogWarning("One of the data persistence objects is null.");
+            }
         }
-        //TODO - save that data to a file using the data handler
-        dataHandler.Save(gameData);
+
+        // Save the data to a file using the data handler
+        if (dataHandler != null)
+        {
+            dataHandler.Save(gameData);
+        }
+        else
+        {
+            Debug.LogWarning("Data handler is null. Cannot save.");
+        }
     }
 
     private void OnApplicationQuit()
@@ -72,10 +101,7 @@ public class DataPresistanceManager : MonoBehaviour
         SaveGame();
     }
 
-    private void OnApplicationFocus()
-    {
-        SaveGame();
-    }
+    private void OnApplicationFocus() => SaveGame();
 
     private List<IDataPresistance> FindAllDataPersistanceObjects()
     {
