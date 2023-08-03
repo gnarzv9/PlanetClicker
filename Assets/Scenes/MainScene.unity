@@ -13190,7 +13190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a82446db9ebb84ab5daf128e69c087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 906481905}
 --- !u!212 &906481908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22017,7 +22016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567df36fdf0708d419d5466108b3b588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceships: {fileID: 1603622280}
 --- !u!1 &1608010952
 GameObject:
   m_ObjectHideFlags: 0
@@ -29417,6 +29415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4577287401869912915, guid: 4d94d43f73e8fe94b85ff8ea76b8f87f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0590c7352a949f46adbdb7bd669476b, type: 3}
     - target: {fileID: 7159762226668838066, guid: 4d94d43f73e8fe94b85ff8ea76b8f87f, type: 3}
       propertyPath: m_Enabled
       value: 0

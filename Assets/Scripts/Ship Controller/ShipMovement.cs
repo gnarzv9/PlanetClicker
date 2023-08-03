@@ -25,6 +25,8 @@ public class ShipMovement : MonoBehaviour
         private float fireRate=0.5f;
 
         private float fireTimer;
+
+        public Joystick joystick;
         
     
 
@@ -43,9 +45,9 @@ public class ShipMovement : MonoBehaviour
 
     void SpaceshipMovement(){
 
-        movementX=Input.GetAxisRaw("Horizontal");
+        movementX=joystick.Horizontal;
         transform.position+= new Vector3(movementX,0f,0f)*Time.deltaTime*speed;  
-        movementY=Input.GetAxisRaw("Vertical");
+        movementY=joystick.Vertical;
         transform.position+= new Vector3(0f,movementY,0f)*Time.deltaTime*speed;
     }
 
