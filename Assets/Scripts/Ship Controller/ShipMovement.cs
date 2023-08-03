@@ -11,7 +11,7 @@ public class ShipMovement : MonoBehaviour
         [SerializeField]
         private float movementY;
         [SerializeField]
-        private int shipHealth=5;
+        public int shipHealth=5;
         private SpriteRenderer sr;
         [SerializeField]
         private Rigidbody2D shipRB;
@@ -66,7 +66,7 @@ public class ShipMovement : MonoBehaviour
         }
         if(shipHealth==0){
          Destroy(other.gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject);         
         }
-    }
+    } 
 }
