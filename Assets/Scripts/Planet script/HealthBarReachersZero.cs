@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class HealthBarReachersZero : MonoBehaviour
 {
@@ -51,7 +52,6 @@ public class HealthBarReachersZero : MonoBehaviour
                 planethealth.CurrentHealth = (int)(planethealth.MaxHealth * 1.5);
                 planethealth.MaxHealth = planethealth.CurrentHealth;
                 healthbar.SetMaxHealth(planethealth.MaxHealth);
-                FindObjectOfType<AudioMangaer>().Play("explosion");
             }
             else
             {
@@ -59,8 +59,9 @@ public class HealthBarReachersZero : MonoBehaviour
                 rebirth.PreRebirthText.text = numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
                 rebirth.shopPreRebirthText.text = "+" + numbers.AbbreviateNumber(rebirth.GetPreRebirthResource());
                 planethealth.CurrentHealth = planethealth.MaxHealth;
-                FindObjectOfType<AudioMangaer>().Play("explosion");
             }
+            FindObjectOfType<AudioMangaer>().Play("explosion");
+            //CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             changedHp = true;
         }
         else changedHp = false; 
