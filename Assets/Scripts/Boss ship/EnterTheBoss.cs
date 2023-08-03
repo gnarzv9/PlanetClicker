@@ -32,6 +32,7 @@ public class EnterTheBoss : MonoBehaviour
 
     //objekti korsiceni za menjanje boje
     [SerializeField] private Button[] buttons;
+    [SerializeField] private GameObject[] borders;
 
     public bool[] ClickedOnce
     {
@@ -64,7 +65,7 @@ public class EnterTheBoss : MonoBehaviour
         //proverava da li je igrac selektovao samo 3 shipa
         //dodati da mora da ima taj ship
         int numberOfSelected = 0;
-        for(int i = 0; i < numberOfShips; i++)
+        for(int i = 0; i < 16; i++)
         {
             if (clickedOnce[i] == true)
                 numberOfSelected++;
@@ -84,6 +85,7 @@ public class EnterTheBoss : MonoBehaviour
         hideShips.SetActive(false);
         otherButton1.SetActive(false);
         otherButton2.SetActive(false);
+        FindObjectOfType<AudioMangaer>().Play("buttonclick");
     }
 
     //zatvara panel koji se pojavio
@@ -91,6 +93,7 @@ public class EnterTheBoss : MonoBehaviour
     {
         ChangeAnimationState("closePanel");
         StartCoroutine(WaitToClose());
+        FindObjectOfType<AudioMangaer>().Play("buttonclick");
     }
     //gasi dugme dok se ne zavrsi animacija odlaska panela
     public IEnumerator WaitToClose()
@@ -107,15 +110,20 @@ public class EnterTheBoss : MonoBehaviour
         if (!clickedOnce[index])
         {
             clickedOnce[index] = true;
+            borders[index].SetActive(true);
+            FindObjectOfType<AudioMangaer>().Play("checkIcon");
         }
         else
         {
             clickedOnce[index] = false;
+            borders[index].SetActive(false);
+            FindObjectOfType<AudioMangaer>().Play("uncheckIcon");
         }
     }
 
     public void newScene(string sceneName)
     {
+        FindObjectOfType<AudioMangaer>().Play("newScene");
         SceneManager.LoadScene(sceneName);       
     }
 }

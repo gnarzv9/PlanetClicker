@@ -48,7 +48,9 @@ public class TestShop : MonoBehaviour
             {
                 game.setResource(game.GetResource() - ship.ShipPrice);
                 ship.Upgrade();
+                FindObjectOfType<AudioMangaer>().Play("normalUpgrade");
             }
         }
+        FindObjectOfType<AudioMangaer>().Play("NoMoneySound");
     }
 }

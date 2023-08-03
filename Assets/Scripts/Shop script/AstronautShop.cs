@@ -52,10 +52,12 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             rebirth.shopRebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("Upgrejdovao sam dugme 1");
+            FindObjectOfType<AudioMangaer>().Play("yesRebirth");
         }
         else
         {
             Debug.Log("Nisam upgrejdovao dugme 1");
+            FindObjectOfType<AudioMangaer>().Play("noRebirth");
         }  
     }
     //povecava dmg
@@ -70,10 +72,12 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             rebirth.shopRebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("Upgrejdovao damage");
+            FindObjectOfType<AudioMangaer>().Play("yesRebirth");
         }
         else
         {
             Debug.Log("nisam usao2");
+            FindObjectOfType<AudioMangaer>().Play("noRebirth");
         }
     }
 
@@ -89,10 +93,12 @@ public class AstronautShop : MonoBehaviour, IDataPresistance
             rebirth.rebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             rebirth.shopRebirthText.text = numbers.AbbreviateNumber(rebirth.GetRebirthResource());
             Debug.Log("usao sam3");
+            FindObjectOfType<AudioMangaer>().Play("yesRebirth");
         }
         else
         {
             Debug.Log("nisam usao3");
+            FindObjectOfType<AudioMangaer>().Play("noRebirth");
         }
     }
 }

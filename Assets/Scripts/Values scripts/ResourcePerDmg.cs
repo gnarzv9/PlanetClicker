@@ -48,6 +48,7 @@ public class ResourcePerDmg : MonoBehaviour, IDataPresistance
             game.ResourcesText.text = num.AbbreviateNumber(game.GetResource()); //pokazuje resurse prikupljene pri udarcu
             damageText.text = num.AbbreviateNumber(dmg); //formatira text damage-a
             ptHp.TakeDamage(dmg);
+            FindObjectOfType<AudioMangaer>().Play("hit");
         }
     }
 }

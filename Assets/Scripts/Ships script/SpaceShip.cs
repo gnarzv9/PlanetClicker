@@ -83,5 +83,6 @@ public class SpaceShip : MonoBehaviour , IDataPresistance
         shipPrice += upgradePrice;
         priceText.text = numbers.AbbreviateNumber(shipPrice) + "$";
         damageText.text = numbers.AbbreviateNumber(shipDmg) + "dmg";
+        FindObjectOfType<AudioMangaer>().Play("firstUpgrade");
     }
 }

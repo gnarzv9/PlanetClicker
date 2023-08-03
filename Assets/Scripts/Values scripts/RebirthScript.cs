@@ -72,6 +72,7 @@ public class RebirthScript : MonoBehaviour, IDataPresistance
         PreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
         shopRebirthText.text = numbers.AbbreviateNumber(rebirthResource);
         shopPreRebirthText.text = numbers.AbbreviateNumber(PreRebirthResource);
+        FindObjectOfType<AudioMangaer>().Play("yesRebirth");
     }
 
 }
