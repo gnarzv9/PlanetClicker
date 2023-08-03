@@ -11,7 +11,7 @@ public class ShipMovement : MonoBehaviour
         [SerializeField]
         private float movementY;
         [SerializeField]
-        private int shipHealth=3;
+        private int shipHealth=5;
         private SpriteRenderer sr;
         [SerializeField]
         private Rigidbody2D shipRB;

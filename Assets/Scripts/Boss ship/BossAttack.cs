@@ -71,7 +71,7 @@ public class BossAttack : MonoBehaviour
         //    Destroy(other.gameObject);     //za slucaj da se dotaknu
         //}
         if(other.gameObject.CompareTag("Bullet")){
-            bossHealth-=10;
+            bossHealth-=2;
             Destroy(other.gameObject);
         }
         if(bossHealth ==0){
