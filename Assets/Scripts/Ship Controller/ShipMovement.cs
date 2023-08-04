@@ -38,12 +38,12 @@ public class ShipMovement : MonoBehaviour
     {
         SpaceshipMovement();
 
-        if(Input.GetMouseButtonDown(0) && fireTimer<=0f){
+        /*if(Input.GetMouseButtonDown(0) && fireTimer<=0f){
             Shoot();
-            fireTimer=fireRate;
+            fireTimer=fireRate;  //bez dugmeta, mozda dodati kasnije da moze da se puca sporije i smanji brzina na puc
         }else{
             fireTimer-=Time.deltaTime;
-        }
+        }*/
     }
 
     void SpaceshipMovement(){
@@ -58,7 +58,7 @@ public class ShipMovement : MonoBehaviour
         shipRB.velocity= new Vector2(movementX,movementY).normalized*speed;
     }
 
-    private void Shoot(){
+    public void Shoot(){
         Instantiate(bulletPrefab, firingPoint.position,firingPoint.rotation);
     }
 
