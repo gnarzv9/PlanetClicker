@@ -63,7 +63,7 @@ public class PanelScript : MonoBehaviour
         }
 
 
-        else if(hpNeeded.shipHealth <=0)
+        if(hpNeeded.shipHealth <=0)
         {
             result.text = "Defeat";
             outcome.text = "boss killed you try better next time";
