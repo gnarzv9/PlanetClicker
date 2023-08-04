@@ -31,6 +31,8 @@ public class ShipMovement : MonoBehaviour
 
         public Button ShootButton;
 
+    [SerializeField] GameObject ship;
+
     //[SerializeField] private GameObject ship;
 
     // Update is called once per frame
@@ -69,7 +71,8 @@ public class ShipMovement : MonoBehaviour
         }
         if(shipHealth==0){
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            ship.SetActive(false);
+            //Destroy(gameObject);
         }
     } 
 }

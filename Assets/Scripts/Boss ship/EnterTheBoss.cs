@@ -34,6 +34,9 @@ public class EnterTheBoss : MonoBehaviour
     [SerializeField] private Button[] buttons;
     [SerializeField] private GameObject[] borders;
 
+    //za cuvanje podataka pre ulaska u drugu scenu
+    [SerializeField] private DataPresistanceManager data;
+
     public bool[] ClickedOnce
     {
         get { return clickedOnce; }
@@ -124,6 +127,7 @@ public class EnterTheBoss : MonoBehaviour
     public void newScene(string sceneName)
     {
         FindObjectOfType<AudioMangaer>().Play("newScene");
+        data.SaveGame();
         SceneManager.LoadScene(sceneName);       
     }
 }
