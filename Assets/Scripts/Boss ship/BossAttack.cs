@@ -16,10 +16,12 @@ public class BossAttack : MonoBehaviour
     public Transform firingPoint;
     public GameObject bulletPrefab;
     public int bossHealth=100;
+    public HealthBarBossEnemy healthBar;
 
     private void start(){
         rb=GetComponent<Rigidbody2D>();
         timeToFire=fireRate;
+        healthBar.SetMaxHealthBoss(bossHealth);
     }
     private void Update(){
         if(!target){
@@ -72,6 +74,7 @@ public class BossAttack : MonoBehaviour
         //}
         if(other.gameObject.CompareTag("Bullet")){
             bossHealth-=2;
+            healthBar.SetHealthBoss(bossHealth);
             Destroy(other.gameObject);
         }
         if(bossHealth ==0){

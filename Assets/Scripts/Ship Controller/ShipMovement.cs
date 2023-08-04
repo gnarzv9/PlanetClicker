@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class ShipMovement : MonoBehaviour
         private float fireTimer;
 
         public Joystick joystick;
+
+        public Button ShootButton;
 
     //[SerializeField] private GameObject ship;
 
