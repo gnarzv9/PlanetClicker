@@ -27,8 +27,8 @@ public class ShipMovement : MonoBehaviour
         private float fireTimer;
 
         public Joystick joystick;
-        
-    
+
+    //[SerializeField] private GameObject ship;
 
     // Update is called once per frame
     void Update()
@@ -65,8 +65,8 @@ public class ShipMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
         if(shipHealth==0){
-         Destroy(other.gameObject);
-            Destroy(gameObject);         
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     } 
 }

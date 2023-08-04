@@ -897,6 +897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758777177}
+  - component: {fileID: 758777178}
   m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
@@ -929,6 +930,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -879}
   m_SizeDelta: {x: 702, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &758777178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758777176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d461a037d6dc8e4ebbc67882b9ae415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 851498311}
+  numOfHearts: 5
+  hearts:
+  - {fileID: 1526280925}
+  - {fileID: 1148803083}
+  - {fileID: 929926475}
+  - {fileID: 332267873}
+  - {fileID: 1054691455}
+  Hp: {fileID: 21300000, guid: 600e7bd41c132e946b5b4f5bac4fd461, type: 3}
+  lostHp: {fileID: 21300000, guid: 6e4cc4b820c10e444b5d8c7fe2580653, type: 3}
 --- !u!224 &837161856 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -961,7 +984,6 @@ GameObject:
   - component: {fileID: 851498307}
   - component: {fileID: 851498310}
   - component: {fileID: 851498311}
-  - component: {fileID: 851498312}
   m_Layer: 5
   m_Name: Spaceship
   m_TagString: Ship
@@ -1185,28 +1207,6 @@ MonoBehaviour:
   firingPoint: {fileID: 1492779972}
   fireRate: 0.5
   joystick: {fileID: 837161857}
---- !u!114 &851498312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851498298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d461a037d6dc8e4ebbc67882b9ae415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 851498311}
-  numOfHearts: 5
-  hearts:
-  - {fileID: 1526280925}
-  - {fileID: 1148803083}
-  - {fileID: 929926475}
-  - {fileID: 332267873}
-  - {fileID: 1054691455}
-  Hp: {fileID: 21300000, guid: 600e7bd41c132e946b5b4f5bac4fd461, type: 3}
-  lostHp: {fileID: 21300000, guid: 6e4cc4b820c10e444b5d8c7fe2580653, type: 3}
 --- !u!1 &929926473
 GameObject:
   m_ObjectHideFlags: 0

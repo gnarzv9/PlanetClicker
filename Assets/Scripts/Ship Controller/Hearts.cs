@@ -9,9 +9,10 @@ public class Hearts : MonoBehaviour
    private ShipMovement health;
    public int numOfHearts=5;
 
-   public Image[] hearts;
+    public Image[] hearts;
    public Sprite Hp;
    public Sprite lostHp;
+    
 
 
    void Update(){
