@@ -78,8 +78,14 @@ public class BossAttack : MonoBehaviour
             Destroy(other.gameObject);
         }
         if(bossHealth ==0){
-         Destroy(other.gameObject);
-            Destroy(gameObject);
+         StartCoroutine(waitFrame(other));
         }   
+    }
+
+    IEnumerator waitFrame(Collision2D other)
+    {
+        Destroy(other.gameObject);
+        Destroy(gameObject);
+        yield return new WaitForSeconds(1);
     }
 }

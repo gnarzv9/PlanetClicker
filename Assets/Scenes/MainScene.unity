@@ -22397,7 +22397,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1641474456}
   - component: {fileID: 1641474457}
-  - component: {fileID: 1641474458}
   m_Layer: 0
   m_Name: DataPersistanceManager
   m_TagString: Untagged
@@ -22433,18 +22432,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.game
---- !u!114 &1641474458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641474455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b79041e4bb98924f88367c839b07b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1669233393
 GameObject:
   m_ObjectHideFlags: 0

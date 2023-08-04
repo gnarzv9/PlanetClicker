@@ -1,37 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private ShipMovement hpNeeded;
-    [SerializeField] private BossAttack bossHp;
-    [SerializeField] private GameObject joystick;
-    [SerializeField] private GameObject boss;
-    [SerializeField] private GameObject Panel;
+    [SerializeField] private float timeLimit;
+    [SerializeField] private TMP_Text time;
+    public int OverTime;
 
-
-    private void Update()
+    public float TimeLimit
     {
-        if(bossHp.bossHealth <= 0 || hpNeeded.shipHealth <= 0)
-        {
-            Panel.SetActive(true);
-            joystick.SetActive(false);
-            boss.SetActive(false);
-        }
+        get { return timeLimit; }
     }
 
+    private float gameStartTime;
 
-
-    public void RestartScene()
+    private void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameStartTime = Time.time;
     }
 
-    public void GoHome(string sceneName)
+    public float GetElapsedTime()
     {
-        SceneManager.LoadScene(sceneName);
+        return Time.time - gameStartTime;
     }
 
+    public void TimeText()
+    {
+        OverTime = (int)(TimeLimit - GetElapsedTime());
+        time.text = OverTime.ToString() + "s";
+    }
 }
