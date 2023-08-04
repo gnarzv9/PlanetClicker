@@ -23,29 +23,25 @@ public class ShipMovement : MonoBehaviour
         private Transform firingPoint;
         [Range(0.1f,1f)]
         [SerializeField]
-        private float fireRate=0.5f;
+        private float fireRate=0.7f;
 
         private float fireTimer;
 
         public Joystick joystick;
 
-        public Button ShootButton;
 
     [SerializeField] GameObject ship;
 
-    //[SerializeField] private GameObject ship;
-
-    // Update is called once per frame
     void Update()
     {
         SpaceshipMovement();
 
-        /*if(Input.GetMouseButtonDown(0) && fireTimer<=0f){
+        if(fireTimer<=0f){
             Shoot();
-            fireTimer=fireRate;  //bez dugmeta, mozda dodati kasnije da moze da se puca sporije i smanji brzina na puc
+            fireTimer=fireRate; 
         }else{
             fireTimer-=Time.deltaTime;
-        }*/
+        }
     }
 
     void SpaceshipMovement(){

@@ -15,7 +15,7 @@ public class BossAttack : MonoBehaviour
     private float timeToFire;
     public Transform firingPoint;
     public GameObject bulletPrefab;
-    public int bossHealth=100;
+    public int bossHealth=80;
     public HealthBarBossEnemy healthBar;
 
     private void start(){
@@ -36,13 +36,14 @@ public class BossAttack : MonoBehaviour
     }
 
     private void Shoot(){
-        if(timeToFire<=0f){
+        if(timeToFire<=0f&& bossHealth>0){
             Instantiate(bulletPrefab, firingPoint.position,firingPoint.rotation);
             Debug.Log("Shoot");
             timeToFire=fireRate;  
         }else{
             timeToFire-=Time.deltaTime;
         }
+        
     }
 
     private void FixedUpdate(){
