@@ -29,6 +29,8 @@ public class ShipMovement : MonoBehaviour
 
         public Joystick joystick;
 
+        [SerializeField]
+        private BossAttack boss;
 
     [SerializeField] GameObject ship;
 
@@ -36,7 +38,7 @@ public class ShipMovement : MonoBehaviour
     {
         SpaceshipMovement();
 
-        if(fireTimer<=0f){
+        if(fireTimer<=0f && boss.bossHealth>0){
             Shoot();
             fireTimer=fireRate; 
         }else{

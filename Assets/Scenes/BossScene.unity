@@ -1770,6 +1770,7 @@ MonoBehaviour:
   firingPoint: {fileID: 1492779972}
   fireRate: 0.5
   joystick: {fileID: 837161857}
+  boss: {fileID: 79447090}
   ship: {fileID: 851498298}
 --- !u!1 &929926473
 GameObject:
